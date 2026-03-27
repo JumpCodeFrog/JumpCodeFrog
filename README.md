@@ -2,19 +2,19 @@
   <h1>hey, I'm Thomas 👋</h1>
   <h3>Backend Developer • PHP → Golang • Linux • Cryptography</h3>
 
-  [![Profile Views](https://komarev.com/ghpvc/?username=JumpCodeFrog&color=58a6ff&style=flat&label=Profile+views)](https://github.com/JumpCodeFrog)
+  [![Profile Views](https://komarev.com/ghpvc/?username=JumpCodeFrog&color=58a6ff&style=flat&label=views)](https://github.com/JumpCodeFrog)
 </div>
 
 ---
 
 ### About me
 
-Independent developer who loves solving real problems from first principles.
+Independent developer. I don't wait for someone to teach me — I pick a problem, dig in, and figure it out.
 
-Started with **PHP** — built production websites and a **custom CMS engine** from scratch.  
-Now diving deep into **Go** because I care about performance, clean architecture and understanding how things *really* work under the hood.
+Started with **PHP**, built production websites and a **custom CMS engine** from scratch.  
+Now going deeper into **Go** — because I like systems, performance, and tools that just work.
 
-**Currently building** a beautiful **CLI Cryptocurrency Wallet** in pure Go — cryptographic primitives, no frameworks, excellent terminal UX.
+Currently building a **CLI cryptocurrency wallet in Go** — cryptographic primitives, clean architecture, full terminal UX. No frameworks, no shortcuts.
 
 > "If you want something done right, read the source code."
 
@@ -32,7 +32,7 @@ Now diving deep into **Go** because I care about performance, clean architecture
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=JumpCodeFrog&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="170" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JumpCodeFrog&layout=compact&theme=tokyonight&hide_border=true&hide=html,css" height="170" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JumpCodeFrog&layout=compact&theme=tokyonight&hide_border=true" height="170" />
 </div>
 
 ---
@@ -45,32 +45,27 @@ Now diving deep into **Go** because I care about performance, clean architecture
 
 ---
 
-### Currently working on
-
-**CLI Crypto Wallet (Go)** — *in progress*
-
-Command-line cryptocurrency wallet with focus on security, usability and understanding cryptography deeply. Pure Go, no external frameworks.
-
----
-
 ### What I've built
 
-- **Custom CMS Engine** — Full-featured content management system built in PHP without any frameworks. Used in production.
-- **CLI Crypto Wallet** — Current main project (Go)
+- **Custom CMS Engine** (`PHP` + `MySQL`)  
+  Full-featured content management system built without frameworks. Used in production.
+
+- **CLI Crypto Wallet** (`Golang`) — *in progress*  
+  Command-line wallet with focus on security and understanding cryptography deeply.
 
 ---
 
 ### A bit more about me
 
-- 🇨🇭 Based in Bellinzona, Switzerland
-- 🇩🇪 Learning German (B1 → B2)
-- 🔐 Passionate about cryptography, privacy and open source
+- 🇨🇭 Based in Bellinzona, Switzerland  
+- 🇩🇪 Learning German (B1 → B2)  
+- 🔐 Passionate about cryptography, privacy and open source  
 - 📚 Philosophy background — helps me think clearly about complex problems
 
 ---
 
-**Open to interesting projects, collaboration and remote opportunities.**
+**Open to remote work, collaboration and interesting problems.**
 
 ---
 
-*Made with ❤️ and a lot of ☕*
+*Made with ❤️ and a lot of ☕ in Switzerland*
