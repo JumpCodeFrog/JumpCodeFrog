@@ -28,23 +28,6 @@ Currently building a **CLI cryptocurrency wallet in Go** — cryptographic primi
 
 ---
 
-### 🔥 GitHub Stats
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=JumpCodeFrog&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="170" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JumpCodeFrog&layout=compact&theme=tokyonight&hide_border=true" height="170" />
-</div>
-
----
-
-### 🏆 Trophies
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=JumpCodeFrog&theme=tokyonight&column=3&margin-w=15&margin-h=15" />
-</div>
-
----
-
 ### What I've built
 
 - **Custom CMS Engine** (`PHP` + `MySQL`)  
