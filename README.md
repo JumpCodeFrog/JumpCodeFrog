@@ -175,15 +175,18 @@ The design intent is the lowest response latency the kernel will give me on this
 
 ## `$ ls ~/private --summary`
 
-Eight private repositories. I'm flagging the boundary rather than blurring it: **everything in this section is my own description of private work, not something you can verify from this profile.** Weigh it accordingly — the public repos above are the evidence.
+Eight private repositories, all of them listed below — the count and the names, so this section can't be read as hinting at more than exists. **Everything here is my own description of code you cannot open from this profile.** Weigh it accordingly; the public repos above are the evidence.
 
 <table>
-<tr><td><b>BingX HFT bot</b></td><td><code>Go</code></td><td>Trading system. <i>My description, unverifiable from here:</i> ONNX Runtime inference in the decision path, a 32-factor indicator engine, sub-millisecond execution. No public benchmark backs that last phrase. If you want to check whether I can write that kind of I/O loop, read <code>uring-kv</code> — same discipline, public.</td></tr>
-<tr><td><b>shitproxy</b></td><td><code>Go</code></td><td>LLM gateway translating between the OpenAI and Anthropic API shapes. <code>aipf</code> is the auditing half of the same problem, published because the auditing half is safe to publish.</td></tr>
-<tr><td><b>pupa-backend</b></td><td><code>Go</code></td><td>Backend service: auth, OTP, Swagger/OpenAPI-documented surface.</td></tr>
-<tr><td><b>my_coin</b></td><td><code>Rust</code></td><td>Private, no published description. Listed as the source of the Rust below.</td></tr>
-<tr><td><b>x-plata</b></td><td><code>PHP</code></td><td>Private, no published description. Listed as the source of the PHP below.</td></tr>
+<tr><td><b>shitproxy</b></td><td><code>Go</code></td><td>LLM gateway translating between the OpenAI and Anthropic API shapes. <code>aipf</code> is the auditing half of the same problem, published because the auditing half is the half that's safe to publish.</td></tr>
+<tr><td><b>shitproxy-channels-backup</b></td><td><code>—</code></td><td>Automated backup of the gateway's channel and token config, on a 6-hour cycle.</td></tr>
+<tr><td><b>pupa-backend</b></td><td><code>Go</code></td><td>Backend service: auth, OTP over a smart identifier, Swagger/OpenAPI-documented surface.</td></tr>
+<tr><td><b>my_coin</b></td><td><code>Rust</code></td><td>No published description. Listed as the source of the Rust in the stack row.</td></tr>
+<tr><td><b>x-plata</b></td><td><code>PHP</code></td><td>No published description.</td></tr>
+<tr><td><b>ru.repair</b> · <b>siteforcompany</b> · <b>workspacerurepair</b></td><td><code>PHP</code></td><td>Earlier commercial web work. Where the PHP in the stack row comes from, and the reason it's listed there rather than up top.</td></tr>
 </table>
+
+<sub>The trading work in my bio is closed and not in a repository on this account, so there is nothing here to point you at and no benchmark of it I can publish. Judge the systems claim on <code>uring-kv</code> instead — that one is public, it's mine, and it's 31 KB.</sub>
 
 ---
 
