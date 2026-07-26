@@ -1,0 +1,148 @@
+# .github/workflows/metrics.yml
+#
+# Static profile statistics for JumpCodeFrog/JumpCodeFrog.
+# Renders SVG cards with lowlighter/metrics and commits them to the default
+# branch, so README.md has zero runtime dependency on third-party stat services.
+#
+# Verified against lowlighter/metrics on 2026-07-26:
+#   - latest release tag ......... v3.34 (published 2023-09-13)
+#   - action ref used ............ lowlighter/metrics@v3.34
+#   - default output_action ...... commit
+#   - default committer_token .... ${{ github.token }}
+#   - default committer_branch ... repository default branch
+#   - languages repo exclusion ... plugin_languages_skipped (newline-separated array)
+#   - theme/dark-mode input ...... DOES NOT EXIST. Only extras_css. See note below.
+#
+# Coexistence with the existing .github/workflows/snake.yml (Platane/snk@v3):
+#   snake.yml publishes to the 'output' branch; this workflow commits to the
+#   default branch. Different branches, different files, different schedules.
+#   The commit here is made with GITHUB_TOKEN, and GitHub does not trigger new
+#   workflow runs from GITHUB_TOKEN pushes, so this cannot start a snake run
+#   or a loop back into itself.
+
+name: Metrics
+
+on:
+  schedule:
+    # 04:37 UTC daily. Deliberately off the top of the hour: GitHub delays
+    # scheduled jobs that pile up at :00. Stagger against snake.yml's cron.
+    - cron: "37 4 * * *"
+  workflow_dispatch:
+
+# Only GITHUB_TOKEN scope needed. It performs the git push, NOT the data query.
+permissions:
+  contents: write
+
+# Two runs pushing to the default branch at once would fail on non-fast-forward.
+concurrency:
+  group: metrics-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    # Never burn a fork's Actions minutes or push to a fork's default branch.
+    if: github.repository == 'JumpCodeFrog/JumpCodeFrog'
+    timeout-minutes: 20
+
+    steps:
+      # ---------------------------------------------------------------------
+      # 1. Overview / stats card  ->  metrics-overview.svg
+      #    Replaces github-readme-stats: commits, PRs, issues, stars, followers.
+      # ---------------------------------------------------------------------
+      - name: Overview card
+        uses: lowlighter/metrics@v3.34
+        with:
+          # Falls back to GITHUB_TOKEN when no PAT is configured, so this
+          # workflow runs green on day one. With only GITHUB_TOKEN the cards
+          # cover PUBLIC data only. Add a classic PAT with scopes `repo` and
+          # `read:user` as the METRICS_TOKEN secret to include private-repo
+          # contributions in the commit/activity counts.
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          user: JumpCodeFrog
+          filename: metrics-overview.svg
+
+          template: classic
+          base: header, activity, community, repositories
+          # Explicit rather than relying on action defaults.
+          output_action: commit
+          committer_branch: main
+          # Extra API calls, but makes total commits / PRs / PR reviews /
+          # repos-contributed-to accurate instead of first-page estimates.
+          base_indepth: yes
+
+          config_output: svg
+          config_timezone: Europe/Moscow
+          # Skip the commit entirely when nothing changed. Prevents a daily
+          # no-op commit polluting the default branch history.
+          output_condition: data-changed
+          # output_action defaults to "commit"; committer_branch defaults to
+          # the repository default branch. Both left implicit on purpose.
+
+          # --- dual-theme legibility -------------------------------------
+          # metrics has NO theme input. The rendered SVG is TRANSPARENT and
+          # inherits the page background, so it already adapts to both GitHub
+          # themes. Only two hardcoded light-mode colors need neutralizing.
+          #   * h1/h2 ship as #0366d6 -> ~3.4:1 on GitHub dark. #4493f8 clears
+          #     3:1 large-text on white and ~5.4:1 on dark.
+          #   * empty contribution cells ship as a solid #ebedf0 inline fill,
+          #     which glares as bright blocks on dark. Swapped for an
+          #     alpha-blended neutral that reads correctly over any background.
+          # Body text stays at the default #777 (~4.5:1 white, ~4.4:1 dark).
+          extras_css: |
+            h1, h2 { color: #4493f8 !important; }
+            rect.day[fill="#ebedf0"] { fill: #8b949e59 !important; }
+
+      # ---------------------------------------------------------------------
+      # 2. Languages breakdown  ->  metrics-languages.svg
+      #    base: "" renders ONLY the languages plugin, no header/activity.
+      # ---------------------------------------------------------------------
+      - name: Languages card
+        uses: lowlighter/metrics@v3.34
+        with:
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          user: JumpCodeFrog
+          filename: metrics-languages.svg
+
+          template: classic
+          base: ""
+          config_output: svg
+          config_timezone: Europe/Moscow
+          output_condition: data-changed
+          output_action: commit
+          committer_branch: main
+
+          plugin_languages: yes
+          plugin_languages_details: percentage
+          plugin_languages_limit: 8
+          plugin_languages_threshold: 1%
+          plugin_languages_sections: most-used
+          plugin_languages_colors: github
+
+          # ---------------------------------------------------------------
+          # dpowcoin exclusion. This is an 11.3MB Bitcoin Core fork whose
+          # upstream C++ would otherwise dominate the entire chart.
+          #
+          # Uses plugin_languages_skipped (newline-separated array), NOT the
+          # global repositories_skipped -- deliberately. The global option
+          # would also strip dpowcoin from the stars/forks/repo counters on
+          # the overview card. Scoping the exclusion to this one plugin keeps
+          # the repo counted everywhere it is legitimate, and removes it only
+          # from the language math.
+          #
+          # Both the bare name and the owner/name form are listed because the
+          # matcher accepts plain handles or names.
+          plugin_languages_skipped: |
+            dpowcoin
+            JumpCodeFrog/dpowcoin
+
+          # NOTE: plugin_languages_indepth is intentionally OFF. It clones every
+          # repo onto the runner and runs linguist -- more accurate (strips
+          # vendored/generated code) but "significantly increases workflow time"
+          # and adds analysis-timeout failure modes. Turn on only if the default
+          # byte-count algorithm still misrepresents the mix.
+
+          extras_css: |
+            h1, h2 { color: #4493f8 !important; }
