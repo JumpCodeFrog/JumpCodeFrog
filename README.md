@@ -124,7 +124,7 @@ Everything on this page is either readable in a public repo or explicitly marked
 </tr>
 </table>
 
-<sub><b>Also public:</b> <a href="https://github.com/JumpCodeFrog/dpowcoin">dpowcoin</a> — a Bitcoin Core-derived C++ fork. Listed for completeness and labelled honestly: the overwhelming bulk of that tree is upstream Bitcoin Core, not my code. It inflates my C++ line count and proves nothing about me, so it is excluded from the language chart below. Judge the C++ on <code>uring-kv</code> instead — that one is 31 KB and all of it is mine.</sub>
+<sub><b>Also public:</b> <a href="https://github.com/JumpCodeFrog/dpowcoin">dpowcoin</a> — a Bitcoin Core-derived C++ fork. Listed for completeness and labelled honestly: the overwhelming bulk of that tree is upstream Bitcoin Core, not my code. It inflates my C++ line count and proves nothing about me. Judge the C++ on <code>uring-kv</code> instead — that one is 31 KB and all of it is mine.</sub>
 
 <details>
 <summary><b>&nbsp;Why completion-based I/O, in the shape it actually takes</b></summary>
@@ -186,7 +186,7 @@ Eight private repositories, all of them listed below — the count and the names
 <tr><td><b>ru.repair</b> · <b>siteforcompany</b> · <b>workspacerurepair</b></td><td><code>PHP</code></td><td>Earlier commercial web work. Where the PHP in the stack row comes from, and the reason it's listed there rather than up top.</td></tr>
 </table>
 
-<sub>The trading work in my bio is closed and not in a repository on this account, so there is nothing here to point you at and no benchmark of it I can publish. Judge the systems claim on <code>uring-kv</code> instead — that one is public, it's mine, and it's 31 KB.</sub>
+<sub>The trading work in my bio is closed and not in a repository on this account, so there is nothing here to point you at and no benchmark of it I can publish. Judge the systems claim on <code>uring-kv</code> instead — that one is public, it's mine, and it's 31 KB of C++.</sub>
 
 ---
 
