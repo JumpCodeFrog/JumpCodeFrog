@@ -101,6 +101,7 @@ jobs:
           extras_css: |
             svg { background: #0F0B06 !important; color: #D59D53 !important; }
             h1, h2 { color: #FFB000 !important; }
+            .title, .subtitle { color: #E8A33D !important; }
             .field svg { fill: #A87A3A !important; }
             rect.day[fill="#ebedf0"] { fill: #FFB0001F !important; }
             rect.day[fill="#9be9a8"] { fill: #7A4E12 !important; }
@@ -161,3 +162,4 @@ jobs:
           extras_css: |
             svg { background: #0F0B06 !important; color: #D59D53 !important; }
             h1, h2 { color: #FFB000 !important; }
+            .title, .subtitle { color: #E8A33D !important; }
