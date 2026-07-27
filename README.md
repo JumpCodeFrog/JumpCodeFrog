@@ -6,7 +6,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=3400&pause=900&color=00FF41&background=00000000&center=true&vCenter=true&width=720&lines=uring-kv+%E2%80%94+async+TCP+KV+server+on+io_uring%2C+no+epoll;telegram-shop-bot+%E2%80%94+one+static+Go+binary%2C+CGO+off;aipf+%E2%80%94+async+forensics+CLI+for+LLM+proxy+APIs;go-market-watcher+%E2%80%94+Go+1.25+%2B+PostgreSQL+16+%2B+Compose" />
   <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=3400&pause=900&color=15803D&background=00000000&center=true&vCenter=true&width=720&lines=uring-kv+%E2%80%94+async+TCP+KV+server+on+io_uring%2C+no+epoll;telegram-shop-bot+%E2%80%94+one+static+Go+binary%2C+CGO+off;aipf+%E2%80%94+async+forensics+CLI+for+LLM+proxy+APIs;go-market-watcher+%E2%80%94+Go+1.25+%2B+PostgreSQL+16+%2B+Compose" />
-  <img alt="uring-kv — async TCP KV server on io_uring, no epoll · telegram-shop-bot — one static Go binary, CGO off · aipf — async forensics CLI for LLM proxy APIs · go-market-watcher — Go 1.25 + PostgreSQL 16 + Compose" src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=3400&pause=900&color=15803D&background=00000000&center=true&vCenter=true&width=720&lines=uring-kv+%E2%80%94+async+TCP+KV+server+on+io_uring%2C+no+epoll" />
+  <img alt="uring-kv — async TCP KV server on io_uring, no epoll · telegram-shop-bot — one static Go binary, CGO off · aipf — async forensics CLI for LLM proxy APIs · go-market-watcher — Go 1.25 + PostgreSQL 16 + Compose" src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=3400&pause=900&color=15803D&background=00000000&center=true&vCenter=true&width=720&lines=uring-kv+%E2%80%94+async+TCP+KV+server+on+io_uring%2C+no+epoll;telegram-shop-bot+%E2%80%94+one+static+Go+binary%2C+CGO+off;aipf+%E2%80%94+async+forensics+CLI+for+LLM+proxy+APIs;go-market-watcher+%E2%80%94+Go+1.25+%2B+PostgreSQL+16+%2B+Compose" />
 </picture>
 </a>
 
@@ -206,11 +206,11 @@ Eight private repositories, all of them listed below — the count and the names
 
 <div align="center">
 
-<img alt="Repository and activity metrics for JumpCodeFrog, generated as a static SVG" width="840" src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/metrics-overview.svg" />
+<img alt="Repository and activity metrics for JumpCodeFrog, generated as a static SVG" width="480" src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/metrics-overview.svg" />
 
 <br>
 
-<img alt="Most-used languages across JumpCodeFrog's repositories, with the dpowcoin fork excluded" width="420" src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/metrics-languages.svg" />
+<img alt="Most-used languages across JumpCodeFrog's repositories, with the dpowcoin fork excluded" width="480" src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/metrics-languages.svg" />
 
 <br>
 
