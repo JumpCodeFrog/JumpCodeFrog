@@ -100,7 +100,7 @@ jobs:
           # Body text stays at the default #777 (~4.5:1 white, ~4.4:1 dark).
           extras_css: |
             svg { background: #0F0B06 !important; color: #D59D53 !important; }
-            h1, h2 { color: #FFB000 !important; }
+            h1, h2, h3 { color: #FFB000 !important; }
             .title, .subtitle { color: #E8A33D !important; }
             .field svg { fill: #A87A3A !important; }
             rect.day[fill="#ebedf0"] { fill: #FFB0001F !important; }
@@ -161,5 +161,5 @@ jobs:
 
           extras_css: |
             svg { background: #0F0B06 !important; color: #D59D53 !important; }
-            h1, h2 { color: #FFB000 !important; }
+            h1, h2, h3 { color: #FFB000 !important; }
             .title, .subtitle { color: #E8A33D !important; }
