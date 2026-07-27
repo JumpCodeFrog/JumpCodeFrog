@@ -23,22 +23,18 @@
 name: Metrics
 
 on:
-  # MANUAL ONLY until a PAT is configured as the METRICS_TOKEN secret.
+  # METRICS_TOKEN was configured and a manual run on 2026-07-27 produced correct
+  # cards (Go 63.29% / Python 31.52% / C++ 5.19%, dpowcoin excluded), so the
+  # schedule below is live.
   #
-  # With only GITHUB_TOKEN, a 2026-07-26 run produced cards reading
-  # "1 Repository" and "0 Languages": GITHUB_TOKEN is scoped to THIS repository
-  # and cannot enumerate the account's repositories, so the language math has
-  # nothing to run on. Publishing those numbers would be worse than publishing
-  # none, so the daily schedule stays commented out until the token exists.
-  #
-  # To enable: add METRICS_TOKEN (classic PAT, scopes `repo` + `read:user`),
-  # run this workflow once by hand to confirm the counts are right, then
-  # uncomment the schedule below.
-  #
-  # schedule:
-  #   # 04:37 UTC daily. Off the top of the hour: GitHub delays scheduled jobs
-  #   # that pile up at :00. Staggered against snake.yml's cron.
-  #   - cron: "37 4 * * *"
+  # If the cards ever regress to "1 Repository" and "0 Languages", the PAT has
+  # expired or been revoked: GITHUB_TOKEN alone is scoped to THIS repository and
+  # cannot enumerate the account, so the language math has nothing to run on.
+  # Re-issue a classic PAT (scopes `repo` + `read:user`) as METRICS_TOKEN.
+  schedule:
+    # 04:37 UTC daily. Off the top of the hour: GitHub delays scheduled jobs
+    # that pile up at :00. Staggered against snake.yml's cron.
+    - cron: "37 4 * * *"
   workflow_dispatch:
 
 # Only GITHUB_TOKEN scope needed. It performs the git push, NOT the data query.
