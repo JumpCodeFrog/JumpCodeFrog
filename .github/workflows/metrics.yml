@@ -99,8 +99,14 @@ jobs:
           #     alpha-blended neutral that reads correctly over any background.
           # Body text stays at the default #777 (~4.5:1 white, ~4.4:1 dark).
           extras_css: |
-            h1, h2 { color: #4493f8 !important; }
-            rect.day[fill="#ebedf0"] { fill: #8b949e59 !important; }
+            svg { background: #0F0B06 !important; color: #D59D53 !important; }
+            h1, h2 { color: #FFB000 !important; }
+            .field svg { fill: #A87A3A !important; }
+            rect.day[fill="#ebedf0"] { fill: #FFB0001F !important; }
+            rect.day[fill="#9be9a8"] { fill: #7A4E12 !important; }
+            rect.day[fill="#40c463"] { fill: #B87A1E !important; }
+            rect.day[fill="#30a14e"] { fill: #E8A33D !important; }
+            rect.day[fill="#216e39"] { fill: #FFB000 !important; }
 
       # ---------------------------------------------------------------------
       # 2. Languages breakdown  ->  metrics-languages.svg
@@ -153,4 +159,5 @@ jobs:
           # byte-count algorithm still misrepresents the mix.
 
           extras_css: |
-            h1, h2 { color: #4493f8 !important; }
+            svg { background: #0F0B06 !important; color: #D59D53 !important; }
+            h1, h2 { color: #FFB000 !important; }
