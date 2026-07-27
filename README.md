@@ -1,6 +1,6 @@
 <div align="center">
 
-<img alt="Thomas Rosenstein — Go and C++ Engineer · HFT · DevOps · Moscow" src="https://capsule-render.vercel.app/api?type=rect&color=00FF41&height=120&section=header&text=Thomas%20Rosenstein&fontSize=42&fontColor=0D0D0D&fontAlignY=44&desc=Go%20%26%20C%2B%2B%20Engineer%20%C2%B7%20HFT%20%C2%B7%20DevOps%20%C2%B7%20Moscow&descSize=16&descAlignY=72&descColor=0D0D0D" />
+<img width="880" alt="Thomas Rosenstein — Go &amp; C++ Engineer · HFT · DevOps · Moscow" src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/banner-boot.svg" />
 
 <a href="https://github.com/JumpCodeFrog?tab=repositories">
 <picture>
@@ -254,6 +254,6 @@ Eight private repositories, all of them listed below — the count and the names
 <sub><b>ThomasRosen inc.</b> · Moscow, RU · Low-latency backends, trading infrastructure, systems work.<br>
 Issues and PRs on any public repo above are read. Best first message: name the syscall you're worried about.</sub>
 
-<img alt="" src="https://capsule-render.vercel.app/api?type=rect&color=00FF41&height=6&section=footer" />
+<img width="880" alt="" src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/rule.svg" />
 
 </div>
