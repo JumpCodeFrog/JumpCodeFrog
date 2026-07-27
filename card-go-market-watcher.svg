@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" width="880" height="300" role="img" aria-label="go-market-watcher: CLI price watcher. ASCII chart of a price history series. Go 1.25, PostgreSQL 16, Docker Compose, MIT. Unit tests cover the parser and proxy packages. Open repository." font-family="ConsolasFallback,ui-monospace,SFMono-Regular,Menlo,'DejaVu Sans Mono',monospace">
+<title>go-market-watcher — CLI price watcher</title>
+<style>@font-face{src:local('Consolas'),local('Consolas Bold');font-family:'ConsolasFallback';font-display:swap;size-adjust:109%}@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}.cur{opacity:1}@media (prefers-reduced-motion: no-preference){.cur{animation:blink 1.2s steps(1,end) infinite}}@media (max-width:500px){.sm{font-size:17px}}</style>
+<defs>
+ <filter id="glow" x="-25%" y="-25%" width="150%" height="150%" color-interpolation-filters="sRGB">
+  <feGaussianBlur stdDeviation="1.7" result="b"/>
+  <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+  <rect width="4" height="1" fill="#000" opacity="0.30"/></pattern>
+ <radialGradient id="vig" gradientUnits="userSpaceOnUse" cx="440.0" cy="138" r="528"
+   gradientTransform="translate(0,138) scale(1,0.7500) translate(0,-138)">
+  <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+  <stop offset="118%" stop-color="#2A1A06" stop-opacity="0.72"/></radialGradient>
+ <clipPath id="scr"><rect width="880" height="300" rx="10"/></clipPath>
+</defs>
+<g clip-path="url(#scr)">
+<rect width="880" height="300" fill="#0F0B06"/>
+<rect width="880" height="26" fill="#181008"/>
+<text x="16" y="18" xml:space="preserve" font-size="12" fill="#D59D53">jumpcodefrog@moscow:~$ </text>
+<text x="182" y="18" xml:space="preserve" font-size="12" fill="#E8A33D" filter="url(#glow)">go-market-watcher --watch</text>
+<text x="864" y="18" text-anchor="end" font-size="11" fill="#D59D53">MIT · Go 1.25</text>
+<g filter="url(#glow)">
+<text x="26" y="62" xml:space="preserve" font-size="13" fill="#D59D53">  high ┤</text>
+<text x="88.4" y="62" xml:space="preserve" font-size="13" fill="#FFB000">                                </text>
+<text x="26" y="79" xml:space="preserve" font-size="13" fill="#D59D53">       │</text>
+<text x="88.4" y="79" xml:space="preserve" font-size="13" fill="#FFB000">            *                ** </text>
+<text x="26" y="96" xml:space="preserve" font-size="13" fill="#D59D53">       ┤</text>
+<text x="88.4" y="96" xml:space="preserve" font-size="13" fill="#FFB000">       *   * *     **       *  *</text>
+<text x="26" y="113" xml:space="preserve" font-size="13" fill="#D59D53">       │</text>
+<text x="88.4" y="113" xml:space="preserve" font-size="13" fill="#FFB000">     ** * *   *   *  *     *    </text>
+<text x="26" y="130" xml:space="preserve" font-size="13" fill="#D59D53">       ┤</text>
+<text x="88.4" y="130" xml:space="preserve" font-size="13" fill="#FFB000">   **    *     * *    *   *     </text>
+<text x="26" y="147" xml:space="preserve" font-size="13" fill="#D59D53">       │</text>
+<text x="88.4" y="147" xml:space="preserve" font-size="13" fill="#FFB000"> **             *      * *      </text>
+<text x="26" y="164" xml:space="preserve" font-size="13" fill="#D59D53">   low ┼</text>
+<text x="88.4" y="164" xml:space="preserve" font-size="13" fill="#FFB000">*                       *       </text>
+<text x="26" y="181" xml:space="preserve" font-size="13" fill="#D59D53">       └────────────────────────────────</text>
+<text x="88" y="198" xml:space="preserve" font-size="11" fill="#D59D53">price history, stored per run · illustrative shape</text>
+</g>
+<g filter="url(#glow)">
+<text class="sm" x="560" y="62" xml:space="preserve" font-size="19" font-weight="600" fill="#FFB000">go-market-watcher</text>
+<text class="sm" x="560" y="88" xml:space="preserve" font-size="13" font-weight="400" fill="#FFE0B0">CLI price watcher</text>
+<text class="sm" x="560" y="122" xml:space="preserve" font-size="13" font-weight="400" fill="#E8A33D">lang     Go 1.25</text>
+<text class="sm" x="560" y="139" xml:space="preserve" font-size="13" font-weight="400" fill="#E8A33D">store    PostgreSQL 16</text>
+<text class="sm" x="560" y="156" xml:space="preserve" font-size="13" font-weight="400" fill="#E8A33D">runs     Docker Compose</text>
+<text class="sm" x="560" y="173" xml:space="preserve" font-size="13" font-weight="400" fill="#E8A33D">licence  MIT</text>
+<text class="sm" x="560" y="207" xml:space="preserve" font-size="12" font-weight="400" fill="#D59D53">unit tests cover the</text>
+<text class="sm" x="560" y="224" xml:space="preserve" font-size="12" font-weight="400" fill="#D59D53">parser and the proxy</text>
+<text class="sm" x="560" y="241" xml:space="preserve" font-size="12" font-weight="400" fill="#D59D53">packages, because those</text>
+<text class="sm" x="560" y="258" xml:space="preserve" font-size="12" font-weight="400" fill="#D59D53">are what rot.</text>
+</g>
+<text x="26" y="284" xml:space="preserve" font-size="12" fill="#D59D53">golang cli postgresql web-scraping price-tracker wildberries docker-compose</text>
+<text x="834" y="284" text-anchor="end" xml:space="preserve" font-size="12" fill="#FFB000" filter="url(#glow)">[ open go-market-watcher → ]</text>
+<rect class="cur" x="840" y="273" width="8" height="14" fill="#FFB000"/>
+<rect width="880" height="300" fill="url(#scan)"/>
+<rect width="880" height="300" fill="url(#vig)"/>
+<circle cx="0" cy="0" r="30" fill="#000" opacity="0.30"/>
+<circle cx="880" cy="0" r="30" fill="#000" opacity="0.30"/>
+<circle cx="0" cy="300" r="30" fill="#000" opacity="0.30"/>
+<circle cx="880" cy="300" r="30" fill="#000" opacity="0.30"/>
+<rect x="0.5" y="0.5" width="879" height="299" rx="10" fill="none" stroke="#D59D53" stroke-width="1" opacity="0.45"/>
+</g>
+</svg>
