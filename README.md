@@ -124,7 +124,7 @@ Everything on this page is either readable in a public repo or explicitly marked
 </tr>
 </table>
 
-<sub><b>Also public:</b> <a href="https://github.com/JumpCodeFrog/dpowcoin">dpowcoin</a> — a Bitcoin Core-derived C++ fork. Listed for completeness and labelled honestly: the overwhelming bulk of that tree is upstream Bitcoin Core, not my code. It inflates my C++ line count and proves nothing about me. Judge the C++ on <code>uring-kv</code> instead — that one is 31 KB and all of it is mine.</sub>
+<sub><b>Also public:</b> <a href="https://github.com/JumpCodeFrog/dpowcoin">dpowcoin</a> — a Bitcoin Core-derived C++ fork. Listed for completeness and labelled honestly: the overwhelming bulk of that tree is upstream Bitcoin Core, not my code. It inflates my C++ line count and proves nothing about me, so it is excluded from the language panel below. Judge the C++ on <code>uring-kv</code> instead — that one is 31 KB and all of it is mine.</sub>
 
 <details>
 <summary><b>&nbsp;Why completion-based I/O, in the shape it actually takes</b></summary>
@@ -206,6 +206,14 @@ Eight private repositories, all of them listed below — the count and the names
 
 <div align="center">
 
+<img alt="Repository and activity metrics for JumpCodeFrog, generated as a static SVG" width="840" src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/metrics-overview.svg" />
+
+<br>
+
+<img alt="Most-used languages across JumpCodeFrog's repositories, with the dpowcoin fork excluded" width="420" src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/metrics-languages.svg" />
+
+<br>
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/output/github-contribution-grid-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/output/github-contribution-grid-snake.svg" />
@@ -222,7 +230,7 @@ Eight private repositories, all of them listed below — the count and the names
 
 <br><br>
 
-<sub>Both panels are generated from GitHub's own contribution history. The snake is a <b>static SVG</b> rebuilt by a scheduled Action in this repository and committed to its <code>output</code> branch — no third-party service computes it at page load.</sub>
+<sub>The metrics and language panels are <b>static SVGs</b>, rebuilt daily by a scheduled Action in this repository and committed to <code>main</code>; the snake is rebuilt the same way onto the <code>output</code> branch. Nothing among them is computed by a third party at page load, so there is nothing there to go down or start charging. The language panel excludes <code>dpowcoin</code> for the reason given above — counting an upstream Bitcoin Core fork would put C++ near the whole chart and tell you nothing about what I write. The streak card is the one live third-party call on this page.</sub>
 
 </div>
 
