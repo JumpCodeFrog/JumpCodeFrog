@@ -23,9 +23,10 @@ h1, h2, h3 { color: #FFB000 !important; }
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="291.13610611764784" height="8" fill="#00ADD8"/>
-                    <rect mask="url(#languages-bar)" x="291.13610611764784" y="0" width="144.98416675250624" height="8" fill="#3572A5"/>
-                    <rect mask="url(#languages-bar)" x="436.12027287015405" y="0" width="23.879727129845918" height="8" fill="#f34b7d"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="224.9837778847697" height="8" fill="#00ADD8"/>
+                    <rect mask="url(#languages-bar)" x="224.9837778847697" y="0" width="117.07786230139625" height="8" fill="#3572A5"/>
+                    <rect mask="url(#languages-bar)" x="342.06164018616596" y="0" width="113.15630877868722" height="8" fill="#f34b7d"/>
+                    <rect mask="url(#languages-bar)" x="455.2179489648532" y="0" width="4.782051035146846" height="8" fill="#89e051"/>
                 </svg>
                 <div class="row fill-width">
                     <section>
@@ -37,7 +38,7 @@ h1, h2, h3 { color: #FFB000 !important; }
                                 Go
                             </div>
                             <small>
-                                <div>63.29%</div>
+                                <div>48.91%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -48,7 +49,7 @@ h1, h2, h3 { color: #FFB000 !important; }
                                 C++
                             </div>
                             <small>
-                                <div>5.19%</div>
+                                <div>24.6%</div>
                             </small>
                         </div>
                     </section>
@@ -61,7 +62,18 @@ h1, h2, h3 { color: #FFB000 !important; }
                                 Python
                             </div>
                             <small>
-                                <div>31.52%</div>
+                                <div>25.45%</div>
+                            </small>
+                        </div>
+                        <div class="field language details">
+                            <div class="field">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                                    <path fill="#89e051" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                </svg>
+                                Shell
+                            </div>
+                            <small>
+                                <div>1.04%</div>
                             </small>
                         </div>
                     </section>
