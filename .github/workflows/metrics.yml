@@ -24,7 +24,7 @@ name: Metrics
 on:
   # Public profile metrics intentionally use only the ephemeral repository-
   # scoped GITHUB_TOKEN. No user PAT or long-lived account credential is used.
-  # Run 33796966375 verified 7 public non-fork repos, 11 languages,
+  # Run 33798433969 verified 7 public non-fork repos, 11 languages,
   # seven tests, valid SVGs, one atomic commit, and zero annotations.
   # Scheduled runs on 2026-09-02 and 2026-09-03 failed with HTTP 401 because
   # an invalid METRICS_TOKEN still overrode the working GITHUB_TOKEN fallback.
