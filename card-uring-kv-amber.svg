@@ -1,103 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" width="880" height="300" role="img" aria-label="uring-kv: async TCP key-value server on io_uring. ASCII schematic of submission queue, kernel and completion queue. C++20, MIT, Linux 5.10+, 31 KB of C++. accept, recv and send are all submitted through the ring; no epoll, no blocking syscall on the hot path. Open repository." font-family="ConsolasFallback,ui-monospace,SFMono-Regular,Menlo,'DejaVu Sans Mono',monospace">
-<title>uring-kv — async TCP key-value server on io_uring</title>
-<style>@font-face{src:local('Consolas'),local('Consolas Bold');font-family:'ConsolasFallback';font-display:swap;size-adjust:109%}@keyframes sq0{0%,0.0000%{opacity:0}0.0000%,8.3333%{opacity:1}8.3333%,100%{opacity:0}}@keyframes sq1{0%,8.3333%{opacity:0}8.3333%,16.6667%{opacity:1}16.6667%,100%{opacity:0}}@keyframes sq2{0%,16.6667%{opacity:0}16.6667%,25.0000%{opacity:1}25.0000%,100%{opacity:0}}@keyframes sq3{0%,25.0000%{opacity:0}25.0000%,33.3333%{opacity:1}33.3333%,100%{opacity:0}}@keyframes sq4{0%,33.3333%{opacity:0}33.3333%,41.6667%{opacity:1}41.6667%,100%{opacity:0}}@keyframes sq5{0%,41.6667%{opacity:0}41.6667%,50.0000%{opacity:1}50.0000%,100%{opacity:0}}@keyframes sq6{0%,50.0000%{opacity:0}50.0000%,58.3333%{opacity:1}58.3333%,100%{opacity:0}}@keyframes sq7{0%,58.3333%{opacity:0}58.3333%,66.6667%{opacity:1}66.6667%,100%{opacity:0}}@keyframes sq8{0%,66.6667%{opacity:0}66.6667%,75.0000%{opacity:1}75.0000%,100%{opacity:0}}@keyframes sq9{0%,75.0000%{opacity:0}75.0000%,83.3333%{opacity:1}83.3333%,100%{opacity:0}}@keyframes sq10{0%,83.3333%{opacity:0}83.3333%,91.6667%{opacity:1}91.6667%,100%{opacity:0}}@keyframes sq11{0%,91.6667%{opacity:0}91.6667%,100.0000%{opacity:1}100.0000%,100%{opacity:0}}@keyframes cq0{0%,0.0000%{opacity:0}0.0000%,8.3333%{opacity:1}8.3333%,100%{opacity:0}}@keyframes cq1{0%,8.3333%{opacity:0}8.3333%,16.6667%{opacity:1}16.6667%,100%{opacity:0}}@keyframes cq2{0%,16.6667%{opacity:0}16.6667%,25.0000%{opacity:1}25.0000%,100%{opacity:0}}@keyframes cq3{0%,25.0000%{opacity:0}25.0000%,33.3333%{opacity:1}33.3333%,100%{opacity:0}}@keyframes cq4{0%,33.3333%{opacity:0}33.3333%,41.6667%{opacity:1}41.6667%,100%{opacity:0}}@keyframes cq5{0%,41.6667%{opacity:0}41.6667%,50.0000%{opacity:1}50.0000%,100%{opacity:0}}@keyframes cq6{0%,50.0000%{opacity:0}50.0000%,58.3333%{opacity:1}58.3333%,100%{opacity:0}}@keyframes cq7{0%,58.3333%{opacity:0}58.3333%,66.6667%{opacity:1}66.6667%,100%{opacity:0}}@keyframes cq8{0%,66.6667%{opacity:0}66.6667%,75.0000%{opacity:1}75.0000%,100%{opacity:0}}@keyframes cq9{0%,75.0000%{opacity:0}75.0000%,83.3333%{opacity:1}83.3333%,100%{opacity:0}}@keyframes cq10{0%,83.3333%{opacity:0}83.3333%,91.6667%{opacity:1}91.6667%,100%{opacity:0}}@keyframes cq11{0%,91.6667%{opacity:0}91.6667%,100.0000%{opacity:1}100.0000%,100%{opacity:0}}@keyframes pp0{0%,0.0000%{opacity:0}0.0000%,8.3333%{opacity:1}8.3333%,100%{opacity:0}}@keyframes pp1{0%,8.3333%{opacity:0}8.3333%,16.6667%{opacity:1}16.6667%,100%{opacity:0}}@keyframes pp2{0%,16.6667%{opacity:0}16.6667%,25.0000%{opacity:1}25.0000%,100%{opacity:0}}@keyframes pp3{0%,25.0000%{opacity:0}25.0000%,33.3333%{opacity:1}33.3333%,100%{opacity:0}}@keyframes pp4{0%,33.3333%{opacity:0}33.3333%,41.6667%{opacity:1}41.6667%,100%{opacity:0}}@keyframes pp5{0%,41.6667%{opacity:0}41.6667%,50.0000%{opacity:1}50.0000%,100%{opacity:0}}@keyframes pp6{0%,50.0000%{opacity:0}50.0000%,58.3333%{opacity:1}58.3333%,100%{opacity:0}}@keyframes pp7{0%,58.3333%{opacity:0}58.3333%,66.6667%{opacity:1}66.6667%,100%{opacity:0}}@keyframes pp8{0%,66.6667%{opacity:0}66.6667%,75.0000%{opacity:1}75.0000%,100%{opacity:0}}@keyframes pp9{0%,75.0000%{opacity:0}75.0000%,83.3333%{opacity:1}83.3333%,100%{opacity:0}}@keyframes pp10{0%,83.3333%{opacity:0}83.3333%,91.6667%{opacity:1}91.6667%,100%{opacity:0}}@keyframes pp11{0%,91.6667%{opacity:0}91.6667%,100.0000%{opacity:1}100.0000%,100%{opacity:0}}@keyframes sp0{0%,0.0000%{opacity:0}0.0000%,12.5000%{opacity:1}12.5000%,100%{opacity:0}}@keyframes sp1{0%,12.5000%{opacity:0}12.5000%,25.0000%{opacity:1}25.0000%,100%{opacity:0}}@keyframes sp2{0%,25.0000%{opacity:0}25.0000%,37.5000%{opacity:1}37.5000%,100%{opacity:0}}@keyframes sp3{0%,37.5000%{opacity:0}37.5000%,50.0000%{opacity:1}50.0000%,100%{opacity:0}}@keyframes sp4{0%,50.0000%{opacity:0}50.0000%,62.5000%{opacity:1}62.5000%,100%{opacity:0}}@keyframes sp5{0%,62.5000%{opacity:0}62.5000%,75.0000%{opacity:1}75.0000%,100%{opacity:0}}@keyframes sp6{0%,75.0000%{opacity:0}75.0000%,87.5000%{opacity:1}87.5000%,100%{opacity:0}}@keyframes sp7{0%,87.5000%{opacity:0}87.5000%,100.0000%{opacity:1}100.0000%,100%{opacity:0}}.sq{opacity:0}.sqlast{opacity:1}.cq{opacity:0}.cqlast{opacity:1}.pp{opacity:0}.pplast{opacity:1}.sp{opacity:0}.splast{opacity:1}@media (prefers-reduced-motion: no-preference){.sq0{animation:sq0 3.6s steps(1,end) infinite}.sq1{animation:sq1 3.6s steps(1,end) infinite}.sq2{animation:sq2 3.6s steps(1,end) infinite}.sq3{animation:sq3 3.6s steps(1,end) infinite}.sq4{animation:sq4 3.6s steps(1,end) infinite}.sq5{animation:sq5 3.6s steps(1,end) infinite}.sq6{animation:sq6 3.6s steps(1,end) infinite}.sq7{animation:sq7 3.6s steps(1,end) infinite}.sq8{animation:sq8 3.6s steps(1,end) infinite}.sq9{animation:sq9 3.6s steps(1,end) infinite}.sq10{animation:sq10 3.6s steps(1,end) infinite}.sq11{animation:sq11 3.6s steps(1,end) infinite}.cq0{animation:cq0 3.6s steps(1,end) infinite}.cq1{animation:cq1 3.6s steps(1,end) infinite}.cq2{animation:cq2 3.6s steps(1,end) infinite}.cq3{animation:cq3 3.6s steps(1,end) infinite}.cq4{animation:cq4 3.6s steps(1,end) infinite}.cq5{animation:cq5 3.6s steps(1,end) infinite}.cq6{animation:cq6 3.6s steps(1,end) infinite}.cq7{animation:cq7 3.6s steps(1,end) infinite}.cq8{animation:cq8 3.6s steps(1,end) infinite}.cq9{animation:cq9 3.6s steps(1,end) infinite}.cq10{animation:cq10 3.6s steps(1,end) infinite}.cq11{animation:cq11 3.6s steps(1,end) infinite}.pp0{animation:pp0 3.6s steps(1,end) infinite}.pp1{animation:pp1 3.6s steps(1,end) infinite}.pp2{animation:pp2 3.6s steps(1,end) infinite}.pp3{animation:pp3 3.6s steps(1,end) infinite}.pp4{animation:pp4 3.6s steps(1,end) infinite}.pp5{animation:pp5 3.6s steps(1,end) infinite}.pp6{animation:pp6 3.6s steps(1,end) infinite}.pp7{animation:pp7 3.6s steps(1,end) infinite}.pp8{animation:pp8 3.6s steps(1,end) infinite}.pp9{animation:pp9 3.6s steps(1,end) infinite}.pp10{animation:pp10 3.6s steps(1,end) infinite}.pp11{animation:pp11 3.6s steps(1,end) infinite}.sp0{animation:sp0 1.0s steps(1,end) infinite}.sp1{animation:sp1 1.0s steps(1,end) infinite}.sp2{animation:sp2 1.0s steps(1,end) infinite}.sp3{animation:sp3 1.0s steps(1,end) infinite}.sp4{animation:sp4 1.0s steps(1,end) infinite}.sp5{animation:sp5 1.0s steps(1,end) infinite}.sp6{animation:sp6 1.0s steps(1,end) infinite}.sp7{animation:sp7 1.0s steps(1,end) infinite}}@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}.cur{opacity:1}@media (prefers-reduced-motion: no-preference){.cur{animation:blink 1.2s steps(1,end) infinite}}@media (max-width:500px){.sm{font-size:17px}}</style>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 380" width="880" height="380" role="img" aria-label="uring-kv — async TCP key-value server on io_uring. C++20, CMake and liburing for Linux 5.10 and later. accept, recv and send use the ring; no epoll and no blocking syscall on the hot path." font-family="ConsolasFallback,ui-monospace,SFMono-Regular,Menlo,'DejaVu Sans Mono',monospace">
+<title>uring-kv — featured systems project</title>
+<style>
+@font-face{src:local('Consolas'),local('DejaVu Sans Mono');font-family:ConsolasFallback;font-display:swap;size-adjust:105%}
+@keyframes packet{0%,18%{opacity:.18}24%,54%{opacity:1}66%,100%{opacity:.18}}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+.packet{opacity:1}.p2{animation-delay:.28s}.p3{animation-delay:.56s}.p4{animation-delay:.84s}.cursor{opacity:1}
+@media (prefers-reduced-motion:no-preference){.packet{animation:packet 2.8s ease-in-out infinite}.cursor{animation:blink 1.2s steps(1,end) infinite}}
+</style>
 <defs>
- <filter id="glow" x="-25%" y="-25%" width="150%" height="150%" color-interpolation-filters="sRGB">
-  <feGaussianBlur stdDeviation="1.7" result="b"/>
-  <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
- <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
-  <rect width="4" height="1" fill="#000" opacity="0.30"/></pattern>
- <radialGradient id="vig" gradientUnits="userSpaceOnUse" cx="440.0" cy="138" r="528"
-   gradientTransform="translate(0,138) scale(1,0.7500) translate(0,-138)">
-  <stop offset="55%" stop-color="#000" stop-opacity="0"/>
-  <stop offset="118%" stop-color="#2A1A06" stop-opacity="0.72"/></radialGradient>
- <clipPath id="scr"><rect width="880" height="300" rx="10"/></clipPath>
+<filter id="glow" x="-25%" y="-50%" width="150%" height="200%"><feGaussianBlur stdDeviation="1.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" opacity=".30"/></pattern>
+<radialGradient id="vig" cx="50%" cy="45%" r="76%"><stop offset="60%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity=".65"/></radialGradient>
+<clipPath id="frame"><rect width="880" height="380" rx="4"/></clipPath>
 </defs>
-<g clip-path="url(#scr)">
-<rect width="880" height="300" fill="#0F0B06"/>
-<rect width="880" height="26" fill="#181008"/>
-<text x="16" y="18" xml:space="preserve" font-size="12" fill="#D59D53">jumpcodefrog@moscow:~$ </text>
-<text x="182" y="18" xml:space="preserve" font-size="12" fill="#E8A33D" filter="url(#glow)">./uring_kv 127.0.0.1 7777</text>
-<text x="864" y="18" text-anchor="end" font-size="11" fill="#D59D53">MIT · since 2026-05-27</text>
-<g filter="url(#glow)">
-<text x="26" y="62" xml:space="preserve" font-size="13" fill="#FFB000">┌───────────── SUBMISSION QUEUE ─────────────┐</text>
-<text x="26" y="96" xml:space="preserve" font-size="13" fill="#E8A33D">└──────────────────┬─────────────────────────┘</text>
-<text x="26" y="130" xml:space="preserve" font-size="13" fill="#E8A33D">                   ▼</text>
-<text x="26" y="147" xml:space="preserve" font-size="13" fill="#E8A33D">          ┌──────────────────┐</text>
-<text x="26" y="164" xml:space="preserve" font-size="13" fill="#FFB000">          │     K E R N E L  │</text>
-<text x="26" y="181" xml:space="preserve" font-size="13" fill="#E8A33D">          └────────┬─────────┘</text>
-<text x="26" y="215" xml:space="preserve" font-size="13" fill="#E8A33D">                   ▼</text>
-<text x="26" y="232" xml:space="preserve" font-size="13" fill="#E8A33D">┌──────────────────┴─────────────────────────┐</text>
-<text x="26" y="266" xml:space="preserve" font-size="13" fill="#FFB000">└───────────── COMPLETION QUEUE ─────────────┘</text>
-<text class="sq sq0" x="26.0" y="79" xml:space="preserve" font-size="13" font-weight="400" fill="#FFB000">│ ░░   ░░   ░░   ░░   ░░   ░░   ░░   ░░   ░░ │</text>
-<text class="sq sq1" x="26.0" y="79" xml:space="preserve" font-size="13" font-weight="400" fill="#FFB000">│ ▓▓   ░░   ░░   ░░   ░░   ░░   ░░   ░░   ░░ │</text>
-<text class="sq sq2" x="26.0" y="79" xml:space="preserve" font-size="13" font-weight="400" fill="#FFB000">│ ▓▓   ▓▓   ░░   ░░   ░░   ░░   ░░   ░░   ░░ │</text>
-<text class="sq sq3" x="26.0" y="79" xml:space="preserve" font-size="13" font-weight="400" fill="#FFB000">│ ▓▓   ▓▓   ▓▓   ░░   ░░   ░░   ░░   ░░   ░░ │</text>
-<text class="sq sq4" x="26.0" y="79" xml:space="preserve" font-size="13" font-weight="400" fill="#FFB000">│ ▓▓   ▓▓   ▓▓   ▓▓   ░░   ░░   ░░   ░░   ░░ │</text>
-<text class="sq sq5" x="26.0" y="79" xml:space="preserve" font-size="13" font-weight="400" fill="#FFB000">│ ▓▓   ▓▓   ▓▓   ▓▓   ▓▓   ░░   ░░   ░░   ░░ │</text>
-<text class="sq sq6" x="26.0" y="79" xml:space="preserve" font-size="13" font-weight="400" fill="#FFB000">│ ▓▓   ▓▓   ▓▓   ▓▓   ▓▓   ▓▓   ░░   ░░   ░░ │</text>
-<text class="sq sq7" x="26.0" y="79" xml:space="preserve" font-size="13" font-weight="400" fill="#FFB000">│ ▓▓   ▓▓   ▓▓   ▓▓   ▓▓   ▓▓   ▓▓   ░░   ░░ │</text>
-<text class="sq sq8" x="26.0" y="79" xml:space="preserve" font-size="13" font-weight="400" fill="#FFB000">│ ▓▓   ▓▓   ▓▓   ▓▓   ▓▓   ▓▓   ▓▓   ▓▓   ░░ │</text>
-<text class="sq sq9" x="26.0" y="79" xml:space="preserve" font-size="13" font-weight="400" fill="#FFB000">│ ▓▓   ▓▓   ▓▓   ▓▓   ▓▓   ▓▓   ▓▓   ▓▓   ▓▓ │</text>
-<text class="sq sq10" x="26.0" y="79" xml:space="preserve" font-size="13" font-weight="400" fill="#FFB000">│ ▓▓   ▓▓   ▓▓   ▓▓   ▓▓   ▓▓   ▓▓   ▓▓   ▓▓ │</text>
-<text class="sq sq11 sqlast" x="26.0" y="79" xml:space="preserve" font-size="13" font-weight="400" fill="#FFB000">│ ▓▓   ▓▓   ▓▓   ▓▓   ▓▓   ▓▓   ▓▓   ▓▓   ▓▓ │</text>
-<text class="cq cq0" x="26.0" y="249" xml:space="preserve" font-size="13" font-weight="400" fill="#FFB000">│ ░░   ░░   ░░   ░░   ░░   ░░   ░░   ░░   ░░ │</text>
-<text class="cq cq1" x="26.0" y="249" xml:space="preserve" font-size="13" font-weight="400" fill="#FFB000">│ ░░   ░░   ░░   ░░   ░░   ░░   ░░   ░░   ░░ │</text>
-<text class="cq cq2" x="26.0" y="249" xml:space="preserve" font-size="13" font-weight="400" fill="#FFB000">│ ░░   ░░   ░░   ░░   ░░   ░░   ░░   ░░   ░░ │</text>
-<text class="cq cq3" x="26.0" y="249" xml:space="preserve" font-size="13" font-weight="400" fill="#FFB000">│ ░░   ░░   ░░   ░░   ░░   ░░   ░░   ░░   ░░ │</text>
-<text class="cq cq4" x="26.0" y="249" xml:space="preserve" font-size="13" font-weight="400" fill="#FFB000">│ ██   ░░   ░░   ░░   ░░   ░░   ░░   ░░   ░░ │</text>
-<text class="cq cq5" x="26.0" y="249" xml:space="preserve" font-size="13" font-weight="400" fill="#FFB000">│ ██   ██   ░░   ░░   ░░   ░░   ░░   ░░   ░░ │</text>
-<text class="cq cq6" x="26.0" y="249" xml:space="preserve" font-size="13" font-weight="400" fill="#FFB000">│ ██   ██   ██   ░░   ░░   ░░   ░░   ░░   ░░ │</text>
-<text class="cq cq7" x="26.0" y="249" xml:space="preserve" font-size="13" font-weight="400" fill="#FFB000">│ ██   ██   ██   ██   ░░   ░░   ░░   ░░   ░░ │</text>
-<text class="cq cq8" x="26.0" y="249" xml:space="preserve" font-size="13" font-weight="400" fill="#FFB000">│ ██   ██   ██   ██   ██   ░░   ░░   ░░   ░░ │</text>
-<text class="cq cq9" x="26.0" y="249" xml:space="preserve" font-size="13" font-weight="400" fill="#FFB000">│ ██   ██   ██   ██   ██   ██   ░░   ░░   ░░ │</text>
-<text class="cq cq10" x="26.0" y="249" xml:space="preserve" font-size="13" font-weight="400" fill="#FFB000">│ ██   ██   ██   ██   ██   ██   ██   ░░   ░░ │</text>
-<text class="cq cq11 cqlast" x="26.0" y="249" xml:space="preserve" font-size="13" font-weight="400" fill="#FFB000">│ ██   ██   ██   ██   ██   ██   ██   ██   ░░ │</text>
-<text class="pp pp0" x="26.0" y="113" xml:space="preserve" font-size="13" font-weight="400" fill="#E8A33D">                   │  »  </text>
-<text class="pp pp1" x="26.0" y="113" xml:space="preserve" font-size="13" font-weight="400" fill="#E8A33D">                   │  »» </text>
-<text class="pp pp2" x="26.0" y="113" xml:space="preserve" font-size="13" font-weight="400" fill="#E8A33D">                   │  »»»</text>
-<text class="pp pp3" x="26.0" y="113" xml:space="preserve" font-size="13" font-weight="400" fill="#E8A33D">                   │  »  </text>
-<text class="pp pp4" x="26.0" y="113" xml:space="preserve" font-size="13" font-weight="400" fill="#E8A33D">                   │  »» </text>
-<text class="pp pp5" x="26.0" y="113" xml:space="preserve" font-size="13" font-weight="400" fill="#E8A33D">                   │  »»»</text>
-<text class="pp pp6" x="26.0" y="113" xml:space="preserve" font-size="13" font-weight="400" fill="#E8A33D">                   │  »  </text>
-<text class="pp pp7" x="26.0" y="113" xml:space="preserve" font-size="13" font-weight="400" fill="#E8A33D">                   │  »» </text>
-<text class="pp pp8" x="26.0" y="113" xml:space="preserve" font-size="13" font-weight="400" fill="#E8A33D">                   │  »»»</text>
-<text class="pp pp9" x="26.0" y="113" xml:space="preserve" font-size="13" font-weight="400" fill="#E8A33D">                   │  »  </text>
-<text class="pp pp10" x="26.0" y="113" xml:space="preserve" font-size="13" font-weight="400" fill="#E8A33D">                   │  »» </text>
-<text class="pp pp11 pplast" x="26.0" y="113" xml:space="preserve" font-size="13" font-weight="400" fill="#E8A33D">                   │  »»»</text>
-<text x="205" y="113" xml:space="preserve" font-size="13" fill="#D59D53">io_uring_submit()</text>
-<text x="205" y="198" xml:space="preserve" font-size="13" fill="#D59D53">no epoll · no memcpy</text>
+<g clip-path="url(#frame)">
+<rect width="880" height="380" fill="#0D0804"/>
+<rect width="880" height="31" fill="#1A1007"/>
+<text x="18" y="20" font-size="10.5" fill="#A67637">jumpcodefrog@linux:~/public$ ./uring_kv 127.0.0.1 7777</text>
+<text x="860" y="20" text-anchor="end" font-size="9.5" fill="#765126">MIT · C++20 · LINUX 5.10+</text>
+
+<text x="27" y="83" font-size="31" font-weight="700" fill="#FFB000" filter="url(#glow)">uring-kv</text>
+<text x="27" y="111" font-size="12.5" fill="#FFE2AE">async TCP key-value server on io_uring</text>
+<text x="27" y="153" font-size="11" fill="#D59D53">accept / recv / send submitted through the ring.</text>
+<text x="27" y="176" font-size="11" fill="#D59D53">no epoll. no blocking syscall on the hot path.</text>
+<text x="27" y="218" font-size="10.5" fill="#8C6531">lang       C++20</text>
+<text x="27" y="240" font-size="10.5" fill="#8C6531">build      CMake + liburing</text>
+<text x="27" y="262" font-size="10.5" fill="#8C6531">target     Linux 5.10+</text>
+<text x="27" y="284" font-size="10.5" fill="#8C6531">source     31 KB of C++</text>
+<text x="27" y="306" font-size="10.5" fill="#8C6531">licence    MIT</text>
+
+<g transform="translate(474 58)">
+<text x="0" y="0" font-size="9" fill="#765126">SUBMISSION QUEUE</text>
+<rect x="0" y="15" width="370" height="50" fill="#0B0704" stroke="#684517"/>
+<g filter="url(#glow)"><rect class="packet" x="18" y="31" width="28" height="16" fill="#FFB000"/><rect class="packet p2" x="56" y="31" width="28" height="16" fill="#FFB000"/><rect class="packet p3" x="94" y="31" width="28" height="16" fill="#FFB000"/><rect class="packet p4" x="132" y="31" width="28" height="16" fill="#FFB000"/></g>
+<g fill="#30200F"><rect x="170" y="31" width="28" height="16"/><rect x="208" y="31" width="28" height="16"/><rect x="246" y="31" width="28" height="16"/><rect x="284" y="31" width="28" height="16"/><rect x="322" y="31" width="28" height="16"/></g>
+<text x="185" y="85" text-anchor="middle" font-size="10" fill="#D59D53">│ io_uring_submit()</text>
+<text x="185" y="104" text-anchor="middle" font-size="10" fill="#FFB000">▼</text>
+<rect x="105" y="115" width="160" height="44" fill="#100A05" stroke="#B97818"/>
+<text x="185" y="142" text-anchor="middle" font-size="14" fill="#FFB000" filter="url(#glow)">KERNEL</text>
+<text x="185" y="178" text-anchor="middle" font-size="10" fill="#FFB000">▼</text>
+<text x="185" y="197" text-anchor="middle" font-size="9.5" fill="#D59D53">completion events</text>
+<rect x="0" y="210" width="370" height="50" fill="#0B0704" stroke="#684517"/>
+<g filter="url(#glow)"><rect class="packet p4" x="18" y="227" width="28" height="16" fill="#FFE2AE"/><rect class="packet p3" x="56" y="227" width="28" height="16" fill="#FFE2AE"/><rect class="packet p2" x="94" y="227" width="28" height="16" fill="#FFE2AE"/></g>
+<g fill="#30200F"><rect x="132" y="227" width="28" height="16"/><rect x="170" y="227" width="28" height="16"/><rect x="208" y="227" width="28" height="16"/><rect x="246" y="227" width="28" height="16"/><rect x="284" y="227" width="28" height="16"/><rect x="322" y="227" width="28" height="16"/></g>
+<text x="0" y="277" font-size="9" fill="#765126">COMPLETION QUEUE</text>
 </g>
-<g class="sp sp0" filter="url(#glow)"><rect x="713.30" y="48.32" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/><rect x="713.30" y="52.12" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/><rect x="713.30" y="55.92" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/></g>
-<g class="sp sp1" filter="url(#glow)"><rect x="713.30" y="48.32" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/><rect x="713.30" y="52.12" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/><rect x="718.76" y="48.32" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/></g>
-<g class="sp sp2" filter="url(#glow)"><rect x="713.30" y="48.32" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/><rect x="713.30" y="52.12" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/><rect x="713.30" y="55.92" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/><rect x="718.76" y="48.32" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/></g>
-<g class="sp sp3" filter="url(#glow)"><rect x="713.30" y="48.32" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/><rect x="718.76" y="48.32" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/><rect x="718.76" y="52.12" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/></g>
-<g class="sp sp4" filter="url(#glow)"><rect x="713.30" y="52.12" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/><rect x="713.30" y="55.92" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/><rect x="718.76" y="55.92" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/></g>
-<g class="sp sp5" filter="url(#glow)"><rect x="713.30" y="48.32" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/><rect x="713.30" y="52.12" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/><rect x="713.30" y="55.92" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/><rect x="718.76" y="55.92" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/></g>
-<g class="sp sp6" filter="url(#glow)"><rect x="713.30" y="55.92" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/><rect x="718.76" y="52.12" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/><rect x="718.76" y="55.92" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/></g>
-<g class="sp sp7 splast" filter="url(#glow)"><rect x="718.76" y="48.32" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/><rect x="718.76" y="52.12" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/><rect x="718.76" y="55.92" width="3.39" height="2.36" rx="0.6" fill="#FFB000"/></g>
-<g filter="url(#glow)">
-<text class="sm" x="560" y="62" xml:space="preserve" font-size="19" font-weight="600" fill="#FFB000">uring-kv</text>
-<text class="sm" x="560" y="88" xml:space="preserve" font-size="13" font-weight="400" fill="#FFE0B0">async TCP key-value server</text>
-<text class="sm" x="560" y="122" xml:space="preserve" font-size="13" font-weight="400" fill="#E8A33D">lang     C++20</text>
-<text class="sm" x="560" y="139" xml:space="preserve" font-size="13" font-weight="400" fill="#E8A33D">build    CMake + liburing</text>
-<text class="sm" x="560" y="156" xml:space="preserve" font-size="13" font-weight="400" fill="#E8A33D">target   Linux 5.10+</text>
-<text class="sm" x="560" y="173" xml:space="preserve" font-size="13" font-weight="400" fill="#E8A33D">licence  MIT</text>
-<text class="sm" x="560" y="190" xml:space="preserve" font-size="13" font-weight="400" fill="#E8A33D">source   31 KB of C++</text>
-<text class="sm" x="560" y="224" xml:space="preserve" font-size="12" font-weight="400" fill="#D59D53">accept/recv/send all go</text>
-<text class="sm" x="560" y="241" xml:space="preserve" font-size="12" font-weight="400" fill="#D59D53">through the ring. no</text>
-<text class="sm" x="560" y="258" xml:space="preserve" font-size="12" font-weight="400" fill="#D59D53">blocking syscall on the</text>
-<text class="sm" x="560" y="275" xml:space="preserve" font-size="12" font-weight="400" fill="#D59D53">hot path.</text>
-</g>
-<text x="26" y="284" xml:space="preserve" font-size="12" fill="#D59D53">cpp20 io-uring key-value linux networking systems-programming</text>
-<text x="834" y="284" text-anchor="end" xml:space="preserve" font-size="12" fill="#FFB000" filter="url(#glow)">[ open uring-kv → ]</text>
-<rect class="cur" x="840" y="273" width="8" height="14" fill="#FFB000"/>
-<rect width="880" height="300" fill="url(#scan)"/>
-<rect width="880" height="300" fill="url(#vig)"/>
-<circle cx="0" cy="0" r="30" fill="#000" opacity="0.30"/>
-<circle cx="880" cy="0" r="30" fill="#000" opacity="0.30"/>
-<circle cx="0" cy="300" r="30" fill="#000" opacity="0.30"/>
-<circle cx="880" cy="300" r="30" fill="#000" opacity="0.30"/>
-<rect x="0.5" y="0.5" width="879" height="299" rx="10" fill="none" stroke="#D59D53" stroke-width="1" opacity="0.45"/>
+
+<path d="M27 350H853" stroke="#5C3D17"/>
+<text x="27" y="372" font-size="9.5" fill="#FFB000" filter="url(#glow)">[ OPEN URING-KV → ]</text>
+<text x="834" y="372" text-anchor="end" font-size="8.5" fill="#765126">cpp20 · io-uring · networking · systems-programming</text>
+<rect class="cursor" x="842" y="362" width="6" height="10" fill="#FFB000"/>
+<rect width="880" height="380" fill="url(#scan)"/>
+<rect width="880" height="380" fill="url(#vig)"/>
+<rect x=".5" y=".5" width="879" height="379" rx="4" fill="none" stroke="#8E5F1C" opacity=".72"/>
 </g>
 </svg>

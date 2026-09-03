@@ -1,54 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" width="880" height="300" role="img" aria-label="aipf: API Proxy Forensics Toolkit. ASCII probe battery listing checks for the model list, streaming, retry and timeout behaviour, wrapper leaks and provider identity. Async Python CLI, MIT. Open repository." font-family="ConsolasFallback,ui-monospace,SFMono-Regular,Menlo,'DejaVu Sans Mono',monospace">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 225" width="430" height="225" role="img" aria-label="aipf — API Proxy Forensics Toolkit. Async Python CLI that probes model lists, streaming, retry behavior, wrapper leaks and provider identity." font-family="ConsolasFallback,ui-monospace,SFMono-Regular,Menlo,'DejaVu Sans Mono',monospace">
 <title>aipf — API Proxy Forensics Toolkit</title>
-<style>@font-face{src:local('Consolas'),local('Consolas Bold');font-family:'ConsolasFallback';font-display:swap;size-adjust:109%}@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}.cur{opacity:1}@media (prefers-reduced-motion: no-preference){.cur{animation:blink 1.2s steps(1,end) infinite}}@media (max-width:500px){.sm{font-size:17px}}</style>
-<defs>
- <filter id="glow" x="-25%" y="-25%" width="150%" height="150%" color-interpolation-filters="sRGB">
-  <feGaussianBlur stdDeviation="1.7" result="b"/>
-  <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
- <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
-  <rect width="4" height="1" fill="#000" opacity="0.30"/></pattern>
- <radialGradient id="vig" gradientUnits="userSpaceOnUse" cx="440.0" cy="138" r="528"
-   gradientTransform="translate(0,138) scale(1,0.7500) translate(0,-138)">
-  <stop offset="55%" stop-color="#000" stop-opacity="0"/>
-  <stop offset="118%" stop-color="#2A1A06" stop-opacity="0.72"/></radialGradient>
- <clipPath id="scr"><rect width="880" height="300" rx="10"/></clipPath>
-</defs>
-<g clip-path="url(#scr)">
-<rect width="880" height="300" fill="#0F0B06"/>
-<rect width="880" height="26" fill="#181008"/>
-<text x="16" y="18" xml:space="preserve" font-size="12" fill="#D59D53">jumpcodefrog@moscow:~$ </text>
-<text x="182" y="18" xml:space="preserve" font-size="12" fill="#E8A33D" filter="url(#glow)">aipf probe --report json</text>
-<text x="864" y="18" text-anchor="end" font-size="11" fill="#D59D53">MIT · Python 3.11+</text>
-<g filter="url(#glow)">
-<text x="26" y="62" xml:space="preserve" font-size="13" fill="#FFB000">┌─ PROBE BATTERY ─────────────────────┐</text>
-<text x="26" y="79" xml:space="preserve" font-size="13" fill="#FFB000">│ /v1/models                 [ OK ]   │</text>
-<text x="26" y="96" xml:space="preserve" font-size="13" fill="#FFB000">│ streaming vs bulk          [ OK ]   │</text>
-<text x="26" y="113" xml:space="preserve" font-size="13" fill="#FFB000">│ retry / timeout            [ OK ]   │</text>
-<text x="26" y="130" xml:space="preserve" font-size="13" fill="#FFB000">│ wrapper leak               [ OK ]   │</text>
-<text x="26" y="147" xml:space="preserve" font-size="13" fill="#FFB000">│ provider identity          [ OK ]   │</text>
-<text x="26" y="164" xml:space="preserve" font-size="13" fill="#E8A33D">└─────────────────────────────────────┘</text>
+<style>@font-face{src:local('Consolas'),local('DejaVu Sans Mono');font-family:ConsolasFallback;font-display:swap;size-adjust:105%}@keyframes probe{0%,18%{opacity:.25}28%,58%{opacity:1}72%,100%{opacity:.25}}.p{opacity:1}.p2{animation-delay:.35s}.p3{animation-delay:.7s}.p4{animation-delay:1.05s}@media(prefers-reduced-motion:no-preference){.p{animation:probe 2.8s ease-in-out infinite}}</style>
+<defs><filter id="g" x="-25%" y="-50%" width="150%" height="200%"><feGaussianBlur stdDeviation="1.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><pattern id="s" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" opacity=".3"/></pattern><radialGradient id="v"><stop offset="60%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity=".64"/></radialGradient></defs>
+<rect width="430" height="225" fill="#0D0804"/>
+<rect width="430" height="28" fill="#1A1007"/>
+<text x="15" y="18" font-size="9" fill="#765126">02 / PYTHON / FORENSICS</text><text x="414" y="18" text-anchor="end" font-size="8.5" fill="#765126">ASYNC CLI · MIT</text>
+<text x="20" y="67" font-size="22" font-weight="700" fill="#FFE2AE" filter="url(#g)">aipf</text>
+<text x="20" y="92" font-size="10.5" fill="#D59D53">API Proxy Forensics Toolkit</text>
+<text x="20" y="130" font-size="9.5" fill="#8C6531">probe      model list · streaming</text>
+<text x="20" y="151" font-size="9.5" fill="#8C6531">detect     retries · wrapper leaks</text>
+<text x="20" y="172" font-size="9.5" fill="#8C6531">surface    async CLI · no server</text>
+<g transform="translate(286 49)" font-size="8.5">
+<rect width="119" height="122" fill="#100A05" stroke="#5C3D17"/>
+<text x="10" y="19" fill="#FFB000">PROBE BATTERY</text><path d="M10 28H109" stroke="#5C3D17"/>
+<text class="p" x="10" y="48" fill="#FFE2AE">[OK] models</text>
+<text class="p p2" x="10" y="66" fill="#FFE2AE">[OK] stream</text>
+<text class="p p3" x="10" y="84" fill="#FFE2AE">[OK] retry</text>
+<text class="p p4" x="10" y="102" fill="#FFE2AE">[OK] identity</text>
 </g>
-<g filter="url(#glow)">
-<text class="sm" x="560" y="62" xml:space="preserve" font-size="19" font-weight="600" fill="#FFB000">aipf</text>
-<text class="sm" x="560" y="88" xml:space="preserve" font-size="13" font-weight="400" fill="#FFE0B0">API proxy forensics</text>
-<text class="sm" x="560" y="122" xml:space="preserve" font-size="13" font-weight="400" fill="#E8A33D">lang     Python 3.11+</text>
-<text class="sm" x="560" y="139" xml:space="preserve" font-size="13" font-weight="400" fill="#E8A33D">form     async CLI</text>
-<text class="sm" x="560" y="156" xml:space="preserve" font-size="13" font-weight="400" fill="#E8A33D">checks   pytest ruff mypy</text>
-<text class="sm" x="560" y="173" xml:space="preserve" font-size="13" font-weight="400" fill="#E8A33D">licence  MIT</text>
-<text class="sm" x="560" y="207" xml:space="preserve" font-size="12" font-weight="400" fill="#D59D53">no server, no database,</text>
-<text class="sm" x="560" y="224" xml:space="preserve" font-size="12" font-weight="400" fill="#D59D53">no UI. logs redacted,</text>
-<text class="sm" x="560" y="241" xml:space="preserve" font-size="12" font-weight="400" fill="#D59D53">captures sanitized</text>
-<text class="sm" x="560" y="258" xml:space="preserve" font-size="12" font-weight="400" fill="#D59D53">before replay.</text>
-</g>
-<text x="26" y="284" xml:space="preserve" font-size="12" fill="#D59D53">python cli llm openai anthropic api-proxy forensics observability</text>
-<text x="834" y="284" text-anchor="end" xml:space="preserve" font-size="12" fill="#FFB000" filter="url(#glow)">[ open aipf → ]</text>
-<rect class="cur" x="840" y="273" width="8" height="14" fill="#FFB000"/>
-<rect width="880" height="300" fill="url(#scan)"/>
-<rect width="880" height="300" fill="url(#vig)"/>
-<circle cx="0" cy="0" r="30" fill="#000" opacity="0.30"/>
-<circle cx="880" cy="0" r="30" fill="#000" opacity="0.30"/>
-<circle cx="0" cy="300" r="30" fill="#000" opacity="0.30"/>
-<circle cx="880" cy="300" r="30" fill="#000" opacity="0.30"/>
-<rect x="0.5" y="0.5" width="879" height="299" rx="10" fill="none" stroke="#D59D53" stroke-width="1" opacity="0.45"/>
-</g>
+<path d="M20 193H410" stroke="#4E3517"/><text x="20" y="213" font-size="9" fill="#FFB000">[ OPEN → ]</text>
+<rect width="430" height="225" fill="url(#s)"/><rect width="430" height="225" fill="url(#v)"/><rect x=".5" y=".5" width="429" height="224" fill="none" stroke="#7A511B"/>
 </svg>

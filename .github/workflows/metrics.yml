@@ -88,25 +88,19 @@ jobs:
           # output_action defaults to "commit"; committer_branch defaults to
           # the repository default branch. Both left implicit on purpose.
 
-          # --- dual-theme legibility -------------------------------------
-          # metrics has NO theme input. The rendered SVG is TRANSPARENT and
-          # inherits the page background, so it already adapts to both GitHub
-          # themes. Only two hardcoded light-mode colors need neutralizing.
-          #   * h1/h2 ship as #0366d6 -> ~3.4:1 on GitHub dark. #4493f8 clears
-          #     3:1 large-text on white and ~5.4:1 on dark.
-          #   * empty contribution cells ship as a solid #ebedf0 inline fill,
-          #     which glares as bright blocks on dark. Swapped for an
-          #     alpha-blended neutral that reads correctly over any background.
-          # Body text stays at the default #777 (~4.5:1 white, ~4.4:1 dark).
+          # Raw Terminal is intentionally a fixed dark substrate. The cards
+          # remain legible in both GitHub themes because the background and
+          # foreground travel together inside the generated SVG.
           extras_css: |
-            svg { background: #0F0B06 !important; color: #D59D53 !important; }
+            svg { background: #0D0804 !important; color: #D59D53 !important; }
             h1, h2, h3 { color: #FFB000 !important; }
-            .title, .subtitle { color: #E8A33D !important; }
-            .field svg { fill: #A87A3A !important; }
-            rect.day[fill="#ebedf0"] { fill: #FFB0001F !important; }
-            rect.day[fill="#9be9a8"] { fill: #7A4E12 !important; }
-            rect.day[fill="#40c463"] { fill: #B87A1E !important; }
-            rect.day[fill="#30a14e"] { fill: #E8A33D !important; }
+            .title, .subtitle { color: #FFE2AE !important; }
+            .field svg { fill: #8C6531 !important; }
+            small { color: #A67637 !important; }
+            rect.day[fill="#ebedf0"] { fill: #2F1F0E !important; }
+            rect.day[fill="#9be9a8"] { fill: #6B4718 !important; }
+            rect.day[fill="#40c463"] { fill: #A96817 !important; }
+            rect.day[fill="#30a14e"] { fill: #D58B1E !important; }
             rect.day[fill="#216e39"] { fill: #FFB000 !important; }
 
       # ---------------------------------------------------------------------
@@ -160,6 +154,9 @@ jobs:
           # byte-count algorithm still misrepresents the mix.
 
           extras_css: |
-            svg { background: #0F0B06 !important; color: #D59D53 !important; }
+            svg { background: #0D0804 !important; color: #D59D53 !important; }
             h1, h2, h3 { color: #FFB000 !important; }
-            .title, .subtitle { color: #E8A33D !important; }
+            .title, .subtitle { color: #FFE2AE !important; }
+            .field.language svg path { fill: #FFB000 !important; }
+            svg.bar > rect { fill: #A96817 !important; }
+            small { color: #A67637 !important; }

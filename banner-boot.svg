@@ -1,40 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 180" width="880" height="180" role="img" aria-label="Thomas Rosenstein — Go and C++ engineer, HFT, DevOps, Moscow. A terminal showing uname, the uring-kv process, a benchmark result of 181,553 requests per second, and the role line." font-family="ConsolasFallback,ui-monospace,SFMono-Regular,Menlo,'DejaVu Sans Mono',monospace">
-<title>Thomas Rosenstein — Go &amp; C++ engineer</title>
-<style>@font-face{src:local('Consolas'),local('Consolas Bold');font-family:'ConsolasFallback';font-display:swap;size-adjust:109%}@keyframes rise{from{opacity:0}to{opacity:1}}.ln{opacity:1}@media (prefers-reduced-motion: no-preference){.ln{opacity:0;animation:rise .25s ease-out forwards}.l0{animation-delay:0.00s}.l1{animation-delay:1.05s}.l2{animation-delay:2.10s}.l3{animation-delay:3.15s}}@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}.cur{opacity:1}@media (prefers-reduced-motion: no-preference){.cur{animation:blink 1.2s steps(1,end) infinite}}</style>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" width="880" height="340" role="img" aria-label="Thomas Rosenstein — Go and C++ systems engineer in Moscow. Focused on low-latency backends, kernel-side I/O, Linux and small operational surfaces. 19 repositories, 236 commits, 13 languages and contributions to 20 repositories." font-family="ConsolasFallback,ui-monospace,SFMono-Regular,Menlo,'DejaVu Sans Mono',monospace">
+<title>Thomas Rosenstein — systems engineer</title>
+<style>
+@font-face{src:local('Consolas'),local('DejaVu Sans Mono');font-family:ConsolasFallback;font-display:swap;size-adjust:105%}
+@keyframes rise{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+.boot{opacity:1}.cursor{opacity:1}
+@media (prefers-reduced-motion:no-preference){.boot{opacity:0;animation:rise .28s ease-out forwards}.b1{animation-delay:.10s}.b2{animation-delay:.34s}.b3{animation-delay:.58s}.b4{animation-delay:.82s}.cursor{animation:blink 1.2s steps(1,end) infinite}}
+</style>
 <defs>
- <filter id="glow" x="-25%" y="-25%" width="150%" height="150%" color-interpolation-filters="sRGB">
-  <feGaussianBlur stdDeviation="1.7" result="b"/>
-  <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
- <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
-  <rect width="4" height="1" fill="#000" opacity="0.30"/></pattern>
- <radialGradient id="vig" gradientUnits="userSpaceOnUse" cx="440.0" cy="83" r="528"
-   gradientTransform="translate(0,83) scale(1,0.4500) translate(0,-83)">
-  <stop offset="55%" stop-color="#000" stop-opacity="0"/>
-  <stop offset="118%" stop-color="#2A1A06" stop-opacity="0.72"/></radialGradient>
- <clipPath id="scr"><rect width="880" height="180" rx="10"/></clipPath>
+<filter id="glow" x="-25%" y="-40%" width="150%" height="180%"><feGaussianBlur stdDeviation="1.45" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" opacity=".30"/></pattern>
+<radialGradient id="vig" cx="50%" cy="45%" r="74%"><stop offset="58%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity=".68"/></radialGradient>
+<clipPath id="frame"><rect width="880" height="340" rx="4"/></clipPath>
 </defs>
-<g clip-path="url(#scr)">
-<rect width="880" height="180" fill="#0F0B06"/>
-<rect width="880" height="30" fill="#181008"/>
-<circle cx="26" cy="15" r="6" fill="#FF5F56"/>
-<circle cx="46" cy="15" r="6" fill="#FFBD2E"/>
-<circle cx="66" cy="15" r="6" fill="#27C93F"/>
-<text x="440.0" y="19" text-anchor="middle" font-size="11" fill="#D59D53">thomas@moscow — zsh</text>
-<g filter="url(#glow)">
-<g class="ln l0"><text x="30" y="60" font-size="14" fill="#FFB000">$ uname -srm</text><text x="330" y="60" font-size="14" fill="#FFE0B0">Linux 6.17.0 x86_64</text></g>
-<g class="ln l1"><text x="30" y="88" font-size="14" fill="#FFB000">$ cat /proc/self/comm</text><text x="330" y="88" font-size="14" fill="#FFE0B0">uring-kv</text></g>
-<g class="ln l2"><text x="30" y="116" font-size="14" fill="#FFB000">$ ./bench --pipeline 32</text><text x="330" y="116" font-size="14" fill="#FFE0B0">181,553 req/s</text></g>
-<g class="ln l3"><text x="30" y="144" font-size="14" fill="#FFB000">$ echo $ROLE</text><text x="330" y="144" font-size="14" fill="#FFE0B0">Go &amp; C++ engineer</text></g>
-<text x="850" y="160" text-anchor="end" font-size="22" font-weight="600" fill="#FFE0B0">Thomas Rosenstein</text>
+<g clip-path="url(#frame)">
+<rect width="880" height="340" fill="#0D0804"/>
+<rect width="880" height="30" fill="#1A1007"/>
+<circle cx="24" cy="15" r="5.5" fill="#FF5F56"/><circle cx="43" cy="15" r="5.5" fill="#FFBD2E"/><circle cx="62" cy="15" r="5.5" fill="#27C93F"/>
+<text x="440" y="19" text-anchor="middle" font-size="10.5" fill="#A67637">tty0 · jumpcodefrog@node-jcf</text>
+<text x="854" y="19" text-anchor="end" font-size="9.5" fill="#765126">RAW TERMINAL / REV.02</text>
+
+<g class="boot b1" filter="url(#glow)">
+<text x="28" y="60" font-size="11" fill="#8C6531" letter-spacing="1.2">BOOT PROFILE / PUBLIC NODE / MOSCOW</text>
+<text x="28" y="88" font-size="13" fill="#FFB000">$ whoami</text>
 </g>
-<text x="850" y="140" text-anchor="end" font-size="11" fill="#D59D53" letter-spacing="2">GO · C++ · HFT · DEVOPS · MOSCOW</text>
-<rect class="cur" x="30" y="160" width="9" height="16" fill="#FFB000"/>
-<rect width="880" height="180" fill="url(#scan)"/>
-<rect width="880" height="180" fill="url(#vig)"/>
-<circle cx="0" cy="0" r="30" fill="#000" opacity="0.30"/>
-<circle cx="880" cy="0" r="30" fill="#000" opacity="0.30"/>
-<circle cx="0" cy="180" r="30" fill="#000" opacity="0.30"/>
-<circle cx="880" cy="180" r="30" fill="#000" opacity="0.30"/>
-<rect x="0.5" y="0.5" width="879" height="179" rx="10" fill="none" stroke="#D59D53" stroke-width="1" opacity="0.45"/>
+<g class="boot b2" filter="url(#glow)">
+<text x="28" y="139" font-size="42" font-weight="700" fill="#FFE2AE">THOMAS</text>
+<text x="28" y="183" font-size="42" font-weight="700" fill="#FFE2AE">ROSENSTEIN</text>
+<text x="30" y="211" font-size="11.5" fill="#FFB000" letter-spacing="1.3">GO + C++ / LINUX / LOW-LATENCY BACKENDS</text>
+</g>
+
+<g font-size="14" filter="url(#glow)">
+<text x="615" y="79" fill="#8C6531">        _   _</text>
+<text x="615" y="97" fill="#A67637">       (.)_(.)</text>
+<text x="615" y="115" fill="#FFB000">    _ (   _   ) _</text>
+<text x="615" y="133" fill="#FFB000">   / \/`-----'\/ \</text>
+<text x="615" y="151" fill="#A67637"> __\ ( (     ) ) /__</text>
+<text x="615" y="169" fill="#A67637"> )   /\ \._./ /\   (</text>
+<text x="615" y="187" fill="#765126">  )_/ /|\   /|\ \_(</text>
+</g>
+<text x="720" y="211" text-anchor="middle" font-size="9" fill="#765126" letter-spacing="1.8">JUMPCODEFROG</text>
+
+<path d="M28 228H852" stroke="#9A641B" stroke-width="1"/>
+<g class="boot b3">
+<text x="28" y="253" font-size="11" fill="#FFB000">$ cat /proc/operator/status</text>
+<text x="28" y="275" font-size="10.5" fill="#D59D53">focus kernel-side I/O · method measure → cut → ship · deploy one static binary</text>
+</g>
+
+<g class="boot b4">
+<rect x="28" y="291" width="824" height="37" fill="#100A05" stroke="#583A16"/>
+<path d="M234 299v21M440 299v21M646 299v21" stroke="#583A16"/>
+<text x="44" y="306" font-size="8.5" fill="#765126">REPOSITORIES</text><text x="44" y="321" font-size="13" font-weight="700" fill="#FFE2AE">19</text>
+<text x="250" y="306" font-size="8.5" fill="#765126">COMMITS</text><text x="250" y="321" font-size="13" font-weight="700" fill="#FFE2AE">236</text>
+<text x="456" y="306" font-size="8.5" fill="#765126">LANGUAGES</text><text x="456" y="321" font-size="13" font-weight="700" fill="#FFE2AE">13</text>
+<text x="662" y="306" font-size="8.5" fill="#765126">CONTRIBUTED TO</text><text x="662" y="321" font-size="13" font-weight="700" fill="#FFE2AE">20 REPOS</text>
+</g>
+<rect class="cursor" x="845" y="246" width="7" height="12" fill="#FFB000"/>
+<rect width="880" height="340" fill="url(#scan)"/>
+<rect width="880" height="340" fill="url(#vig)"/>
+<rect x=".5" y=".5" width="879" height="339" rx="4" fill="none" stroke="#8E5F1C" opacity=".72"/>
 </g>
 </svg>
