@@ -6,14 +6,14 @@
 #
 # Verified against lowlighter/metrics on 2026-07-26:
 #   - latest release tag ......... v3.34 (published 2023-09-13)
-#   - action ref used ............ lowlighter/metrics@v3.34
+#   - action ref used ............ 65836723097537a54cd8eb90f61839426b4266b6 (v3.34)
 #   - default output_action ...... commit
 #   - default committer_token .... ${{ github.token }}
 #   - default committer_branch ... repository default branch
 #   - languages repo exclusion ... plugin_languages_skipped (newline-separated array)
 #   - theme/dark-mode input ...... DOES NOT EXIST. Only extras_css. See note below.
 #
-# Coexistence with the existing .github/workflows/snake.yml (Platane/snk@v3):
+# Coexistence with the existing .github/workflows/snake.yml:
 #   snake.yml publishes to the 'output' branch; this workflow commits to the
 #   default branch. Different branches, different files, different schedules.
 #   The commit here is made with GITHUB_TOKEN, and GitHub does not trigger new
@@ -23,24 +23,19 @@
 name: Metrics
 
 on:
-  # METRICS_TOKEN is configured; daily cards include private-repository data.
+  # Public profile metrics intentionally use only the ephemeral repository-
+  # scoped GITHUB_TOKEN. No user PAT or long-lived account credential is used.
+  # Run 33769875912 verified this mode with 19 repositories and 13 languages.
   # Scheduled runs on 2026-09-02 and 2026-09-03 failed with HTTP 401 because
-  # the then-configured token was invalid. The secret was replaced at 15:19 UTC
-  # on 2026-09-03; post-rotation run 33789135788 passed every step. The next
-  # actual cron occurrence remains the direct schedule-path verification.
-  #
-  # If the cards ever regress to "1 Repository" and "0 Languages", the PAT has
-  # expired or been revoked: GITHUB_TOKEN alone is scoped to THIS repository and
-  # cannot enumerate the account, so the language math has nothing to run on.
-  # Re-issue a dedicated classic PAT (scopes `repo` + `read:user`) as
-  # METRICS_TOKEN.
+  # an invalid METRICS_TOKEN still overrode the working GITHUB_TOKEN fallback.
+  # That user secret has since been removed.
   schedule:
     # 04:37 UTC daily. Off the top of the hour: GitHub delays scheduled jobs
     # that pile up at :00. Staggered against snake.yml's cron.
     - cron: "37 4 * * *"
   workflow_dispatch:
 
-# Only GITHUB_TOKEN scope needed. It performs the git push, NOT the data query.
+# GITHUB_TOKEN reads public account data and commits the generated SVGs.
 permissions:
   contents: write
 
@@ -57,9 +52,9 @@ jobs:
     timeout-minutes: 20
 
     steps:
-      - name: Validate Metrics token
+      - name: Validate GitHub token
         env:
-          GH_TOKEN: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh api graphql --silent -f query='query { viewer { login } }'
 
       # ---------------------------------------------------------------------
@@ -69,12 +64,10 @@ jobs:
       - name: Overview card
         uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
         with:
-          # Falls back to GITHUB_TOKEN when no PAT is configured, so this
-          # workflow runs green on day one. With only GITHUB_TOKEN the cards
-          # cover PUBLIC data only. Add a classic PAT with scopes `repo` and
-          # `read:user` as the METRICS_TOKEN secret to include private-repo
-          # contributions in the commit/activity counts.
-          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+          # The public portfolio deliberately excludes private-repository data.
+          # A short-lived, repository-scoped GITHUB_TOKEN is sufficient and
+          # avoids exposing a long-lived user credential to an Action runner.
+          token: ${{ secrets.GITHUB_TOKEN }}
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           user: JumpCodeFrog
           filename: metrics-overview.svg
@@ -116,7 +109,7 @@ jobs:
       - name: Languages card
         uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
         with:
-          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           user: JumpCodeFrog
           filename: metrics-languages.svg
