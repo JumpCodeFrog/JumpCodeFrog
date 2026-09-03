@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" width="880" height="340" role="img" aria-label="Thomas Rosenstein — Go and C++ systems engineer in Moscow. Focused on low-latency backends, kernel-side I/O, Linux and small operational surfaces. 19 repositories, 236 commits, 13 languages and contributions to 20 repositories." font-family="ConsolasFallback,ui-monospace,SFMono-Regular,Menlo,'DejaVu Sans Mono',monospace">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" width="880" height="340" role="img" aria-label="Thomas Rosenstein — Go and C++ systems engineer in Moscow. Focused on low-latency backends, kernel-side I/O, Linux and small operational surfaces. Featured project: uring-kv." font-family="ConsolasFallback,ui-monospace,SFMono-Regular,Menlo,'DejaVu Sans Mono',monospace">
 <title>Thomas Rosenstein — systems engineer</title>
 <style>
 @font-face{src:local('Consolas'),local('DejaVu Sans Mono');font-family:ConsolasFallback;font-display:swap;size-adjust:105%}
@@ -50,10 +50,10 @@
 <g class="boot b4">
 <rect x="28" y="291" width="824" height="37" fill="#100A05" stroke="#583A16"/>
 <path d="M234 299v21M440 299v21M646 299v21" stroke="#583A16"/>
-<text x="44" y="306" font-size="8.5" fill="#765126">TOTAL REPOS</text><text x="44" y="321" font-size="13" font-weight="700" fill="#FFE2AE">19</text>
-<text x="250" y="306" font-size="8.5" fill="#765126">COMMITS</text><text x="250" y="321" font-size="13" font-weight="700" fill="#FFE2AE">236</text>
-<text x="456" y="306" font-size="8.5" fill="#765126">LANGUAGES</text><text x="456" y="321" font-size="13" font-weight="700" fill="#FFE2AE">13</text>
-<text x="662" y="306" font-size="8.5" fill="#765126">CONTRIBUTED TO</text><text x="662" y="321" font-size="13" font-weight="700" fill="#FFE2AE">20 REPOS</text>
+<text x="44" y="306" font-size="8.5" fill="#765126">PRIMARY PROJECT</text><text x="44" y="321" font-size="12" font-weight="700" fill="#FFE2AE">URING-KV</text>
+<text x="250" y="306" font-size="8.5" fill="#765126">CORE STACK</text><text x="250" y="321" font-size="12" font-weight="700" fill="#FFE2AE">GO + C++20</text>
+<text x="456" y="306" font-size="8.5" fill="#765126">TARGET</text><text x="456" y="321" font-size="12" font-weight="700" fill="#FFE2AE">LINUX</text>
+<text x="662" y="306" font-size="8.5" fill="#765126">OPERATING MODE</text><text x="662" y="321" font-size="12" font-weight="700" fill="#FFE2AE">LOW LATENCY</text>
 </g>
 <rect class="cursor" x="845" y="246" width="7" height="12" fill="#FFB000"/>
 <rect width="880" height="340" fill="url(#scan)"/>

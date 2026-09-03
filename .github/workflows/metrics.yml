@@ -157,6 +157,4 @@ jobs:
             svg { background: #0D0804 !important; color: #D59D53 !important; }
             h1, h2, h3 { color: #FFB000 !important; }
             .title, .subtitle { color: #FFE2AE !important; }
-            .field.language svg path { fill: #FFB000 !important; }
-            svg.bar > rect { fill: #A96817 !important; }
             small { color: #A67637 !important; }
