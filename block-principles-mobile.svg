@@ -4,15 +4,15 @@
 <defs><pattern id="s" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" opacity=".3"/></pattern><radialGradient id="v"><stop offset="60%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity=".64"/></radialGradient></defs>
 <rect width="430" height="350" rx="4" fill="#0D0804"/>
 <rect x=".5" y=".5" width="429" height="349" rx="4" fill="none" stroke="#684517"/>
-<text x="16" y="28" font-size="13.5" fill="#FFB000">$ how-i-work --short</text>
+<text x="16" y="28" font-size="16" fill="#FFB000">$ how-i-work --short</text>
 <path d="M16 46H414M16 121H414M16 196H414M16 271H414" stroke="#4E3517"/>
-<text x="16" y="72" font-size="14" font-weight="700" fill="#FFB000">[01] read the syscalls</text>
-<text x="16" y="99" font-size="13" fill="#D59D53">strace · perf · flamegraph settle arguments.</text>
-<text x="16" y="147" font-size="14" font-weight="700" fill="#FFB000">[02] delete the fallback</text>
-<text x="16" y="174" font-size="13" fill="#D59D53">one target platform · one tested path.</text>
-<text x="16" y="222" font-size="14" font-weight="700" fill="#FFB000">[03] boring deploys</text>
-<text x="16" y="249" font-size="13" fill="#D59D53">static binary · defaults · small blast radius.</text>
-<text x="16" y="297" font-size="14" font-weight="700" fill="#FFB000">[04] ship the paperwork</text>
-<text x="16" y="324" font-size="13" fill="#D59D53">CI · lint · changelog · security policy.</text>
+<text x="16" y="72" font-size="16" font-weight="700" fill="#FFB000">[01] read the syscalls</text>
+<text x="16" y="99" font-size="15" fill="#D59D53">strace · perf · flamegraph settle arguments.</text>
+<text x="16" y="147" font-size="16" font-weight="700" fill="#FFB000">[02] delete the fallback</text>
+<text x="16" y="174" font-size="15" fill="#D59D53">one target platform · one tested path.</text>
+<text x="16" y="222" font-size="16" font-weight="700" fill="#FFB000">[03] boring deploys</text>
+<text x="16" y="249" font-size="15" fill="#D59D53">static binary · defaults · small blast radius</text>
+<text x="16" y="297" font-size="16" font-weight="700" fill="#FFB000">[04] ship the paperwork</text>
+<text x="16" y="324" font-size="15" fill="#D59D53">CI · lint · changelog · security policy.</text>
 <rect width="430" height="350" rx="4" fill="url(#s)"/><rect width="430" height="350" rx="4" fill="url(#v)"/>
 </svg>

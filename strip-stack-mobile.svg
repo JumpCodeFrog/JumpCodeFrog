@@ -4,8 +4,8 @@
 <defs><pattern id="s" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" opacity=".3"/></pattern><radialGradient id="v"><stop offset="60%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity=".64"/></radialGradient></defs>
 <rect width="430" height="220" rx="4" fill="#0D0804"/>
 <rect x=".5" y=".5" width="429" height="219" rx="4" fill="none" stroke="#684517"/>
-<text x="16" y="25" font-size="13" fill="#A67637">$ stack --installed</text>
-<g font-size="12.5">
+<text x="16" y="25" font-size="15" fill="#A67637">$ stack --installed</text>
+<g font-size="15">
 <g transform="translate(16 43)"><rect width="76" height="34" fill="#181006" stroke="#684517"/><text x="38" y="22" text-anchor="middle" fill="#FFE2AE">GO</text></g>
 <g transform="translate(100 43)"><rect width="92" height="34" fill="#181006" stroke="#684517"/><text x="46" y="22" text-anchor="middle" fill="#FFE2AE">C++20</text></g>
 <g transform="translate(200 43)"><rect width="112" height="34" fill="#181006" stroke="#684517"/><text x="56" y="22" text-anchor="middle" fill="#D59D53">PYTHON</text></g>
@@ -17,6 +17,6 @@
 <g transform="translate(178 127)"><rect width="132" height="34" fill="#181006" stroke="#684517"/><text x="66" y="22" text-anchor="middle" fill="#D59D53">POSTGRESQL</text></g>
 <g transform="translate(318 127)"><rect width="96" height="34" fill="#181006" stroke="#684517"/><text x="48" y="22" text-anchor="middle" fill="#D59D53">DOCKER</text></g>
 </g>
-<text x="16" y="198" font-size="12" fill="#FFB000">one target · one tested path · small surface</text>
+<text x="16" y="198" font-size="14" fill="#FFB000">one target · one tested path · small surface</text>
 <rect width="430" height="220" rx="4" fill="url(#s)"/><rect width="430" height="220" rx="4" fill="url(#v)"/>
 </svg>

@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/banner-boot-mobile.svg" />
-    <img width="880" alt="Thomas Rosenstein — Go and C++ systems engineer focused on low-latency backends, Linux and kernel-side I/O." src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/banner-boot.svg" />
+    <source media="(max-width: 700px)" srcset="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/banner-boot-mobile.svg" />
+    <img alt="Thomas Rosenstein — Go and C++ systems engineer focused on low-latency backends, Linux and kernel-side I/O." src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/banner-boot.svg" />
   </picture>
 </p>
 
@@ -16,8 +16,8 @@ Everything presented as evidence below is available in a public repository. No u
 <p align="center">
   <a href="https://github.com/JumpCodeFrog/uring-kv">
     <picture>
-      <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/card-uring-kv-mobile.svg" />
-      <img width="880" alt="uring-kv — async TCP key-value server on io_uring. C++20, CMake, liburing, MIT." src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/card-uring-kv-amber.svg" />
+      <source media="(max-width: 700px)" srcset="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/card-uring-kv-mobile.svg" />
+      <img alt="uring-kv — async TCP key-value server on io_uring. C++20, CMake, liburing, MIT." src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/card-uring-kv-amber.svg" />
     </picture>
   </a>
 </p>
@@ -32,8 +32,8 @@ Everything presented as evidence below is available in a public repository. No u
 <p align="center">
   <a href="https://github.com/JumpCodeFrog/go-market-watcher">
     <picture>
-      <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/card-go-market-watcher-mobile.svg" />
-      <img width="880" alt="go-market-watcher — Go CLI price watcher with PostgreSQL history and Docker Compose deployment." src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/card-go-market-watcher.svg" />
+      <source media="(max-width: 700px)" srcset="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/card-go-market-watcher-mobile.svg" />
+      <img alt="go-market-watcher — Go CLI price watcher with PostgreSQL history and Docker Compose deployment." src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/card-go-market-watcher.svg" />
     </picture>
   </a>
 </p>
@@ -46,15 +46,15 @@ Everything presented as evidence below is available in a public repository. No u
 
 <p align="center">
   <picture>
-    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/strip-stack-mobile.svg" />
-    <img width="880" alt="Installed toolchain: Go, C++20, Python, Rust, io_uring, Linux, systemd, GitHub Actions, PostgreSQL and Docker." src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/strip-stack.svg" />
+    <source media="(max-width: 700px)" srcset="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/strip-stack-mobile.svg" />
+    <img alt="Installed toolchain: Go, C++20, Python, Rust, io_uring, Linux, systemd, GitHub Actions, PostgreSQL and Docker." src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/strip-stack.svg" />
   </picture>
 </p>
 
 <p align="center">
   <picture>
-    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/block-principles-mobile.svg" />
-    <img width="880" alt="Working principles: read the syscalls, delete the fallback, prefer boring deploys and ship the operational paperwork." src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/block-principles.svg" />
+    <source media="(max-width: 700px)" srcset="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/block-principles-mobile.svg" />
+    <img alt="Working principles: read the syscalls, delete the fallback, prefer boring deploys and ship the operational paperwork." src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/block-principles.svg" />
   </picture>
 </p>
 
@@ -92,8 +92,8 @@ They cover Go backend and gateway work, AI tooling, bots, Rust, PHP, authenticat
 
 <p align="center">
   <picture>
-    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/block-contact-mobile.svg" />
-    <img width="880" alt="Contact Thomas Rosenstein on Telegram at thomasrosenstain or by email at thomasrosenstain at gmail dot com." src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/block-contact.svg" />
+    <source media="(max-width: 700px)" srcset="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/block-contact-mobile.svg" />
+    <img alt="Contact Thomas Rosenstein on Telegram at thomasrosenstain or by email at thomasrosenstain at gmail dot com." src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/block-contact.svg" />
   </picture>
 </p>
 

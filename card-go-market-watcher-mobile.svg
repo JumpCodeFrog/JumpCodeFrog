@@ -4,16 +4,16 @@
 <defs><filter id="g" x="-25%" y="-70%" width="150%" height="240%"><feGaussianBlur stdDeviation="1.35" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><pattern id="s" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" opacity=".3"/></pattern><radialGradient id="v"><stop offset="60%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity=".64"/></radialGradient></defs>
 <rect width="430" height="320" rx="4" fill="#0D0804"/>
 <rect width="430" height="30" rx="4" fill="#1A1007"/>
-<text x="16" y="20" font-size="11" fill="#A67637">03 / GO / MARKET DATA</text><text x="414" y="20" text-anchor="end" font-size="10.5" fill="#A67637">MIT</text>
+<text x="16" y="20" font-size="13" fill="#A67637">03 / GO / MARKET DATA</text><text x="414" y="20" text-anchor="end" font-size="13" fill="#A67637">MIT</text>
 <text x="18" y="70" font-size="25" font-weight="700" fill="#FFE2AE" filter="url(#g)">go-market-watcher</text>
-<text x="18" y="99" font-size="13.5" fill="#D59D53">CLI price watcher with persistent history.</text>
-<text x="18" y="123" font-size="13.5" fill="#D59D53">Docker Compose deployment.</text><text x="18" y="147" font-size="13.5" fill="#D59D53">Parser and proxy tests.</text>
-<text x="18" y="173" font-size="12.5" fill="#B47F40">Go · PostgreSQL</text>
+<text x="18" y="99" font-size="16" fill="#D59D53">CLI price watcher with price history.</text>
+<text x="18" y="123" font-size="16" fill="#D59D53">Docker Compose deployment.</text><text x="18" y="147" font-size="16" fill="#D59D53">Parser and proxy tests.</text>
+<text x="18" y="173" font-size="15" fill="#B47F40">Go · PostgreSQL</text>
 <g transform="translate(18 190)">
 <path d="M0 72H394M0 36H394M0 0H394" stroke="#2F1F0E"/>
 <polyline class="chart" points="0,70 44,60 89,64 134,35 179,51 224,20 269,39 318,10 394,28" fill="none" stroke="#FFB000" stroke-width="3" filter="url(#g)"/>
 <g fill="#FFE2AE"><circle cx="134" cy="35" r="4"/><circle cx="224" cy="20" r="4"/><circle cx="318" cy="10" r="4"/></g>
 </g>
-<path d="M18 285H412" stroke="#684517"/><text x="18" y="309" font-size="11.5" fill="#FFB000">[ OPEN REPOSITORY → ]</text>
+<path d="M18 285H412" stroke="#684517"/><text x="18" y="309" font-size="14" fill="#FFB000">[ OPEN REPOSITORY → ]</text>
 <rect width="430" height="320" rx="4" fill="url(#s)"/><rect width="430" height="320" rx="4" fill="url(#v)"/><rect x=".5" y=".5" width="429" height="319" rx="4" fill="none" stroke="#7A511B"/>
 </svg>

@@ -4,30 +4,30 @@
 <defs><filter id="g" x="-25%" y="-50%" width="150%" height="200%"><feGaussianBlur stdDeviation="1.35" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><pattern id="s" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" opacity=".3"/></pattern><radialGradient id="v"><stop offset="60%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity=".65"/></radialGradient></defs>
 <rect width="430" height="540" rx="4" fill="#0D0804"/>
 <rect width="430" height="31" rx="4" fill="#1A1007"/>
-<text x="16" y="20" font-size="11" fill="#A67637">jumpcodefrog@linux:~/public$ ./uring_kv</text>
-<text x="414" y="20" text-anchor="end" font-size="10.5" fill="#A67637">MIT · C++20</text>
+<text x="16" y="20" font-size="13" fill="#A67637">jumpcodefrog@linux:$ ./uring_kv</text>
+<text x="414" y="20" text-anchor="end" font-size="13" fill="#A67637">MIT · C++20</text>
 <text x="18" y="76" font-size="31" font-weight="700" fill="#FFB000" filter="url(#g)">uring-kv</text>
-<text x="18" y="104" font-size="14.5" fill="#FFE2AE">async TCP key-value server on io_uring</text>
-<text x="18" y="143" font-size="13.5" fill="#D59D53">accept / recv / send submitted through the ring.</text>
-<text x="18" y="168" font-size="13.5" fill="#D59D53">no epoll. no blocking syscall on the hot path.</text>
+<text x="18" y="104" font-size="17" fill="#FFE2AE">async TCP key-value server on io_uring</text>
+<text x="18" y="143" font-size="16" fill="#D59D53">accept / recv / send through the ring.</text>
+<text x="18" y="168" font-size="15.5" fill="#D59D53">no epoll · no blocking syscall on hot path</text>
 <path d="M18 190H412" stroke="#684517"/>
-<g font-size="13">
-<text x="18" y="220" fill="#B47F40">lang</text><text x="104" y="220" fill="#FFE2AE">C++20</text>
-<text x="222" y="220" fill="#B47F40">build</text><text x="296" y="220" fill="#FFE2AE">CMake + liburing</text>
-<text x="18" y="246" fill="#B47F40">target</text><text x="104" y="246" fill="#FFE2AE">Linux 5.10+</text>
-<text x="222" y="246" fill="#B47F40">model</text><text x="296" y="246" fill="#FFE2AE">one event loop</text>
+<g font-size="15">
+<text x="18" y="220" fill="#B47F40">lang</text><text x="90" y="220" fill="#FFE2AE">C++20</text>
+<text x="190" y="220" fill="#B47F40">build</text><text x="252" y="220" fill="#FFE2AE">CMake + liburing</text>
+<text x="18" y="248" fill="#B47F40">target</text><text x="90" y="248" fill="#FFE2AE">Linux 5.10+</text>
+<text x="230" y="248" fill="#B47F40">model</text><text x="292" y="248" fill="#FFE2AE">one loop</text>
 </g>
-<text x="18" y="286" font-size="12" fill="#A67637">SUBMISSION QUEUE</text>
+<text x="18" y="286" font-size="14" fill="#A67637">SUBMISSION QUEUE</text>
 <rect x="18" y="299" width="394" height="50" fill="#0B0704" stroke="#684517"/>
 <g filter="url(#g)"><rect class="packet" x="38" y="315" width="32" height="18" fill="#FFB000"/><rect class="packet p2" x="82" y="315" width="32" height="18" fill="#FFB000"/><rect class="packet p3" x="126" y="315" width="32" height="18" fill="#FFB000"/><rect class="packet p4" x="170" y="315" width="32" height="18" fill="#FFB000"/></g>
 <g fill="#30200F"><rect x="214" y="315" width="32" height="18"/><rect x="258" y="315" width="32" height="18"/><rect x="302" y="315" width="32" height="18"/><rect x="346" y="315" width="32" height="18"/></g>
 <path d="M215 359V378" stroke="#FFB000" stroke-width="2"/><path d="M209 373L215 381L221 373" fill="#FFB000"/>
 <rect x="147" y="389" width="136" height="46" fill="#181006" stroke="#8E5F1C"/>
-<text x="215" y="418" text-anchor="middle" font-size="15" font-weight="700" fill="#FFB000" filter="url(#g)">KERNEL</text>
+<text x="215" y="418" text-anchor="middle" font-size="17" font-weight="700" fill="#FFB000" filter="url(#g)">KERNEL</text>
 <path d="M215 444V460" stroke="#FFB000" stroke-width="2"/><path d="M209 455L215 463L221 455" fill="#FFB000"/>
-<text x="18" y="481" font-size="12" fill="#A67637">COMPLETION QUEUE</text>
+<text x="18" y="481" font-size="14" fill="#A67637">COMPLETION QUEUE</text>
 <rect x="18" y="492" width="394" height="30" fill="#0B0704" stroke="#684517"/>
 <g fill="#FFE2AE" filter="url(#g)"><rect x="38" y="499" width="32" height="16"/><rect x="82" y="499" width="32" height="16"/><rect x="126" y="499" width="32" height="16"/></g><g fill="#30200F"><rect x="170" y="499" width="32" height="16"/><rect x="214" y="499" width="32" height="16"/><rect x="258" y="499" width="32" height="16"/><rect x="302" y="499" width="32" height="16"/><rect x="346" y="499" width="32" height="16"/></g>
-<text x="18" y="535" font-size="11.5" fill="#FFB000">[ OPEN URING-KV → ]</text><rect class="cursor" x="164" y="524" width="7" height="11" fill="#FFB000"/>
+<text x="18" y="535" font-size="14" fill="#FFB000">[ OPEN URING-KV → ]</text><rect class="cursor" x="190" y="524" width="7" height="11" fill="#FFB000"/>
 <rect width="430" height="540" rx="4" fill="url(#s)"/><rect width="430" height="540" rx="4" fill="url(#v)"/><rect x=".5" y=".5" width="429" height="539" rx="4" fill="none" stroke="#8E5F1C"/>
 </svg>
