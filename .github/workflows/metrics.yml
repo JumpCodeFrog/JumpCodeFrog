@@ -24,12 +24,16 @@ name: Metrics
 
 on:
   # METRICS_TOKEN is configured; daily cards include private-repository data.
-  # The schedule below is live.
+  # Scheduled runs on 2026-09-02 and 2026-09-03 failed with HTTP 401 because
+  # the then-configured token was invalid. The secret was replaced at 15:19 UTC
+  # on 2026-09-03; post-rotation run 33789135788 passed every step. The next
+  # actual cron occurrence remains the direct schedule-path verification.
   #
   # If the cards ever regress to "1 Repository" and "0 Languages", the PAT has
   # expired or been revoked: GITHUB_TOKEN alone is scoped to THIS repository and
   # cannot enumerate the account, so the language math has nothing to run on.
-  # Re-issue a classic PAT (scopes `repo` + `read:user`) as METRICS_TOKEN.
+  # Re-issue a dedicated classic PAT (scopes `repo` + `read:user`) as
+  # METRICS_TOKEN.
   schedule:
     # 04:37 UTC daily. Off the top of the hour: GitHub delays scheduled jobs
     # that pile up at :00. Staggered against snake.yml's cron.
