@@ -40,12 +40,12 @@ Everything presented as evidence below is available in a public repository. No u
 </p>
 
 <details>
-<summary><b><code>$ ls ~/private --summary</code></b> — eight repositories, listed without presenting closed source as evidence</summary>
+<summary><b><code>$ ls ~/private --summary</code></b> — eleven repositories, listed without presenting closed source as evidence</summary>
 <br>
 
-`shitproxy` · `shitproxy-channels-backup` · `pupa-backend` · `my_coin` · `x-plata` · `ru.repair` · `siteforcompany` · `workspacerurepair`
+`ai-office` · `ai-relay` · `my_coin` · `pupa-backend` · `quoka-bot` · `ru.repair` · `shitproxy` · `shitproxy-channels-backup` · `siteforcompany` · `workspacerurepair` · `x-plata`
 
-They cover Go backend and gateway work, Rust, PHP, authentication, infrastructure automation, and earlier commercial web projects. Public repositories above are the verifiable portfolio.
+They cover Go backend and gateway work, AI tooling, bots, Rust, PHP, authentication, infrastructure automation, and earlier commercial web projects. Public repositories above are the verifiable portfolio.
 </details>
 
 ---

@@ -50,7 +50,7 @@
 <g class="boot b4">
 <rect x="28" y="291" width="824" height="37" fill="#100A05" stroke="#583A16"/>
 <path d="M234 299v21M440 299v21M646 299v21" stroke="#583A16"/>
-<text x="44" y="306" font-size="8.5" fill="#765126">REPOSITORIES</text><text x="44" y="321" font-size="13" font-weight="700" fill="#FFE2AE">19</text>
+<text x="44" y="306" font-size="8.5" fill="#765126">TOTAL REPOS</text><text x="44" y="321" font-size="13" font-weight="700" fill="#FFE2AE">19</text>
 <text x="250" y="306" font-size="8.5" fill="#765126">COMMITS</text><text x="250" y="321" font-size="13" font-weight="700" fill="#FFE2AE">236</text>
 <text x="456" y="306" font-size="8.5" fill="#765126">LANGUAGES</text><text x="456" y="321" font-size="13" font-weight="700" fill="#FFE2AE">13</text>
 <text x="662" y="306" font-size="8.5" fill="#765126">CONTRIBUTED TO</text><text x="662" y="321" font-size="13" font-weight="700" fill="#FFE2AE">20 REPOS</text>
