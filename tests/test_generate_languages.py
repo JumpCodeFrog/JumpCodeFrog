@@ -41,13 +41,18 @@ class LanguageMetricsTests(unittest.TestCase):
         ET.fromstring(svg)
         self.assertIn("A&amp;B", svg)
         self.assertIn("75.00%", svg)
-        self.assertIn("3 PUBLIC NON-FORK REPOSITORIES", svg)
+        self.assertIn("3 PUBLIC NON-FORK REPOS", svg)
 
     def test_sparse_summary_uses_full_width_percentage_alignment(self):
         svg = metrics.render_svg([("Go", 80, 80.0), ("Python", 20, 20.0)], 2, 3)
 
-        self.assertIn('x="460" y="95" text-anchor="end"', svg)
+        self.assertIn('x="390" y="95" text-anchor="end"', svg)
 
+    def test_card_uses_native_readme_width_and_readable_primary_type(self):
+        svg = metrics.render_svg([("Go", 100, 100.0)], 1, 1)
+
+        self.assertIn('viewBox="0 0 410 196"', svg)
+        self.assertIn('font-size="15" fill="#FFE2AE">Go</text>', svg)
 
     def test_checked_in_card_never_publishes_zero_languages(self):
         card = (Path(__file__).resolve().parents[1] / "metrics-languages.svg").read_text()
