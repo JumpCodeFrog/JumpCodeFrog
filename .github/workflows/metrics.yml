@@ -1,17 +1,16 @@
 # .github/workflows/metrics.yml
 #
 # Static profile statistics for JumpCodeFrog/JumpCodeFrog.
-# Renders SVG cards with lowlighter/metrics and commits them to the default
-# branch, so README.md has zero runtime dependency on third-party stat services.
+# Renders the overview with pinned lowlighter/metrics, renders languages with
+# the repository's stdlib Python generator, then commits both cards atomically.
+# README.md therefore has zero runtime dependency on third-party stat services.
 #
-# Verified against lowlighter/metrics on 2026-07-26:
-#   - latest release tag ......... v3.34 (published 2023-09-13)
-#   - action ref used ............ 65836723097537a54cd8eb90f61839426b4266b6 (v3.34)
-#   - default output_action ...... commit
-#   - default committer_token .... ${{ github.token }}
-#   - default committer_branch ... repository default branch
-#   - languages source ............ public REST /users/{user}/repos + /languages
-#   - theme/dark-mode input ...... DOES NOT EXIST. Only extras_css. See note below.
+# Integration contract verified on 2026-09-03:
+#   - lowlighter/metrics ......... 65836723097537a54cd8eb90f61839426b4266b6 (v3.34)
+#   - lowlighter output .......... output_action=none -> /metrics_renders
+#   - languages source ........... public REST /users/{user}/repos + /languages
+#   - publication ................ one first-party GITHUB_TOKEN commit
+#   - checkout ................... 3d3c42e5aac5ba805825da76410c181273ba90b1 (v7.0.1)
 #
 # Coexistence with the existing .github/workflows/snake.yml:
 #   snake.yml publishes to the 'output' branch; this workflow commits to the
@@ -25,7 +24,8 @@ name: Metrics
 on:
   # Public profile metrics intentionally use only the ephemeral repository-
   # scoped GITHUB_TOKEN. No user PAT or long-lived account credential is used.
-  # Run 33769875912 verified this mode with 19 repositories and 13 languages.
+  # Run 33796966375 verified 7 public non-fork repos, 11 languages,
+  # six tests, valid SVGs, one atomic commit, and zero annotations.
   # Scheduled runs on 2026-09-02 and 2026-09-03 failed with HTTP 401 because
   # an invalid METRICS_TOKEN still overrode the working GITHUB_TOKEN fallback.
   # That user secret has since been removed.
