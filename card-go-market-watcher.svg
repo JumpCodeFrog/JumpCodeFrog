@@ -1,13 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 175" width="880" height="175" role="img" aria-label="go-market-watcher — Go command-line price watcher with PostgreSQL history and Docker Compose deployment." font-family="ConsolasFallback,ui-monospace,SFMono-Regular,Menlo,'DejaVu Sans Mono',monospace">
 <title>go-market-watcher</title>
 <style>@font-face{src:local('Consolas'),local('DejaVu Sans Mono');font-family:ConsolasFallback;font-display:swap;size-adjust:105%}@keyframes draw{from{stroke-dashoffset:640}to{stroke-dashoffset:0}}.chart{stroke-dasharray:640;stroke-dashoffset:0}@media(prefers-reduced-motion:no-preference){.chart{animation:draw 2.8s ease-out both}}</style>
+<style>text[fill="#765126"]{fill:#A67637}text[fill="#8C6531"]{fill:#B47F40}</style>
 <defs><filter id="g" x="-25%" y="-70%" width="150%" height="240%"><feGaussianBlur stdDeviation="1.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><pattern id="s" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" opacity=".3"/></pattern><radialGradient id="v"><stop offset="60%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity=".64"/></radialGradient></defs>
 <rect width="880" height="175" fill="#0D0804"/>
 <rect width="880" height="28" fill="#1A1007"/>
 <text x="16" y="18" font-size="9" fill="#765126">03 / GO / MARKET DATA / POSTGRESQL</text><text x="864" y="18" text-anchor="end" font-size="8.5" fill="#765126">DOCKER COMPOSE · MIT</text>
 <text x="24" y="76" font-size="24" font-weight="700" fill="#FFE2AE" filter="url(#g)">go-market-watcher</text>
 <text x="24" y="103" font-size="10.5" fill="#D59D53">CLI price watcher with persistent history and Docker Compose deployment.</text>
-<text x="24" y="134" font-size="9.5" fill="#8C6531">Go 1.25 · PostgreSQL 16 · parser and proxy tests</text>
+<text x="24" y="134" font-size="9.5" fill="#8C6531">Go · PostgreSQL · parser and proxy tests</text>
 <g transform="translate(522 50)">
 <path d="M0 92H326M0 61H326M0 30H326" stroke="#2F1F0E"/>
 <polyline class="chart" points="0,91 38,79 76,83 113,49 151,67 189,31 228,48 268,22 326,35" fill="none" stroke="#FFB000" stroke-width="2.2" filter="url(#g)"/>

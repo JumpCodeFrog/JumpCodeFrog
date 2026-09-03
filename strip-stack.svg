@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 92" width="880" height="92" role="img" aria-label="Toolbox: Go, C++20, Python, Rust, io_uring, Linux, systemd, GitHub Actions, PostgreSQL and Docker." font-family="ConsolasFallback,ui-monospace,SFMono-Regular,Menlo,'DejaVu Sans Mono',monospace">
 <title>Installed toolchain</title>
 <style>@font-face{src:local('Consolas'),local('DejaVu Sans Mono');font-family:ConsolasFallback;font-display:swap;size-adjust:105%}</style>
+<style>text[fill="#765126"]{fill:#A67637}text[fill="#8C6531"]{fill:#B47F40}</style>
 <defs><pattern id="s" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" opacity=".3"/></pattern><radialGradient id="v"><stop offset="60%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity=".64"/></radialGradient></defs>
 <rect width="880" height="92" fill="#0D0804"/>
 <rect x=".5" y=".5" width="879" height="91" fill="none" stroke="#684517"/>

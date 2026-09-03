@@ -11,7 +11,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: Platane/snk@v3
+      - uses: Platane/snk@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3.5.0
         with:
           github_user_name: JumpCodeFrog
           outputs: |
@@ -19,7 +19,7 @@ jobs:
             dist/github-contribution-grid-snake-dark.svg?color_snake=%23FFB000&color_dots=%230F0B06,%238C5E22,%23C07E1E,%23E8A33D,%23FFB000
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: output

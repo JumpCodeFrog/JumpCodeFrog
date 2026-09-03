@@ -6,6 +6,7 @@
 @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
 .packet{opacity:1}.p2{animation-delay:.28s}.p3{animation-delay:.56s}.p4{animation-delay:.84s}.cursor{opacity:1}
 @media (prefers-reduced-motion:no-preference){.packet{animation:packet 2.8s ease-in-out infinite}.cursor{animation:blink 1.2s steps(1,end) infinite}}
+text[fill="#765126"]{fill:#A67637}text[fill="#8C6531"]{fill:#B47F40}
 </style>
 <defs>
 <filter id="glow" x="-25%" y="-50%" width="150%" height="200%"><feGaussianBlur stdDeviation="1.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
@@ -26,7 +27,7 @@
 <text x="27" y="218" font-size="10.5" fill="#8C6531">lang       C++20</text>
 <text x="27" y="240" font-size="10.5" fill="#8C6531">build      CMake + liburing</text>
 <text x="27" y="262" font-size="10.5" fill="#8C6531">target     Linux 5.10+</text>
-<text x="27" y="284" font-size="10.5" fill="#8C6531">source     31 KB of C++</text>
+<text x="27" y="284" font-size="10.5" fill="#8C6531">model      single event loop</text>
 <text x="27" y="306" font-size="10.5" fill="#8C6531">licence    MIT</text>
 
 <g transform="translate(474 58)">

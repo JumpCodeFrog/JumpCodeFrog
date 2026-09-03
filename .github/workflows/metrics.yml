@@ -23,9 +23,8 @@
 name: Metrics
 
 on:
-  # METRICS_TOKEN was configured and a manual run on 2026-07-27 produced correct
-  # cards (Go 63.29% / Python 31.52% / C++ 5.19%, dpowcoin excluded), so the
-  # schedule below is live.
+  # METRICS_TOKEN is configured; daily cards include private-repository data.
+  # The schedule below is live.
   #
   # If the cards ever regress to "1 Repository" and "0 Languages", the PAT has
   # expired or been revoked: GITHUB_TOKEN alone is scoped to THIS repository and
@@ -54,12 +53,17 @@ jobs:
     timeout-minutes: 20
 
     steps:
+      - name: Validate Metrics token
+        env:
+          GH_TOKEN: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+        run: gh api graphql --silent -f query='query { viewer { login } }'
+
       # ---------------------------------------------------------------------
       # 1. Overview / stats card  ->  metrics-overview.svg
       #    Replaces github-readme-stats: commits, PRs, issues, stars, followers.
       # ---------------------------------------------------------------------
       - name: Overview card
-        uses: lowlighter/metrics@v3.34
+        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
         with:
           # Falls back to GITHUB_TOKEN when no PAT is configured, so this
           # workflow runs green on day one. With only GITHUB_TOKEN the cards
@@ -85,8 +89,6 @@ jobs:
           # Skip the commit entirely when nothing changed. Prevents a daily
           # no-op commit polluting the default branch history.
           output_condition: data-changed
-          # output_action defaults to "commit"; committer_branch defaults to
-          # the repository default branch. Both left implicit on purpose.
 
           # Raw Terminal is intentionally a fixed dark substrate. The cards
           # remain legible in both GitHub themes because the background and
@@ -108,7 +110,7 @@ jobs:
       #    base: "" renders ONLY the languages plugin, no header/activity.
       # ---------------------------------------------------------------------
       - name: Languages card
-        uses: lowlighter/metrics@v3.34
+        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
           committer_token: ${{ secrets.GITHUB_TOKEN }}

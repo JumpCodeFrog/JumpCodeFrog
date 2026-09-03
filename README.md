@@ -17,8 +17,8 @@ Everything presented as evidence below is available in a public repository. No u
 ## `$ ls ~/public --secondary`
 
 <p align="center">
-  <a href="https://github.com/JumpCodeFrog/telegram-shop-bot"><img width="430" alt="telegram-shop-bot — open-source Telegram storefront in Go with embedded SQLite and Telegram Stars payments." src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/card-telegram-shop-bot.svg" /></a>
-  <a href="https://github.com/JumpCodeFrog/aipf"><img width="430" alt="aipf — async Python toolkit for investigating OpenAI-compatible API proxies." src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/card-aipf.svg" /></a>
+  <a href="https://github.com/JumpCodeFrog/telegram-shop-bot"><img width="410" alt="telegram-shop-bot — open-source Telegram storefront in Go with embedded SQLite and Telegram Stars payments." src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/card-telegram-shop-bot.svg" /></a>
+  <a href="https://github.com/JumpCodeFrog/aipf"><img width="410" alt="aipf — async Python toolkit for investigating OpenAI-compatible API proxies." src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/card-aipf.svg" /></a>
 </p>
 
 <p align="center">
@@ -40,7 +40,7 @@ Everything presented as evidence below is available in a public repository. No u
 </p>
 
 <details>
-<summary><b><code>$ ls ~/private --summary</code></b> — eleven repositories, listed without presenting closed source as evidence</summary>
+<summary><b><code>$ ls ~/private --summary</code></b> — selected repositories; closed source is not presented as evidence</summary>
 <br>
 
 `ai-office` · `ai-relay` · `my_coin` · `pupa-backend` · `quoka-bot` · `ru.repair` · `shitproxy` · `shitproxy-channels-backup` · `siteforcompany` · `workspacerurepair` · `x-plata`
@@ -53,8 +53,8 @@ They cover Go backend and gateway work, AI tooling, bots, Rust, PHP, authenticat
 ## `$ activity --snapshot`
 
 <p align="center">
-  <img width="430" alt="Repository and activity metrics for JumpCodeFrog, generated daily as a static SVG." src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/metrics-overview.svg" />
-  <img width="430" alt="Most-used languages across JumpCodeFrog repositories, excluding the upstream-heavy dpowcoin fork." src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/metrics-languages.svg" />
+  <img width="410" alt="Repository and activity metrics for JumpCodeFrog, generated daily as a static SVG." src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/metrics-overview.svg" />
+  <img width="410" alt="Most-used languages across JumpCodeFrog repositories, excluding the upstream-heavy dpowcoin fork." src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/metrics-languages.svg" />
 </p>
 
 <details>
