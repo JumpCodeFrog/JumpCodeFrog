@@ -93,12 +93,12 @@ They cover Go backend and gateway work, AI tooling, bots, Rust, PHP, authenticat
 <p align="center">
   <picture>
     <source media="(max-width: 700px)" srcset="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/block-contact-mobile.svg" />
-    <img alt="Contact Thomas Rosenstein on Telegram at thomasrosenstain or by email at thomasrosenstain at gmail dot com." src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/block-contact.svg" />
+    <img alt="Contact Thomas Rosenstein on Telegram at JumpCodeFrog or by email at thomasrosenstain at gmail dot com." src="https://raw.githubusercontent.com/JumpCodeFrog/JumpCodeFrog/main/block-contact.svg" />
   </picture>
 </p>
 
 <p align="center">
-  <a href="https://t.me/thomasrosenstain"><code>telegram</code></a>
+  <a href="https://t.me/JumpCodeFrog"><code>telegram</code></a>
   &nbsp;·&nbsp;
   <a href="mailto:thomasrosenstain@gmail.com"><code>email</code></a>
 </p>
