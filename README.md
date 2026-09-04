@@ -58,15 +58,6 @@ Everything presented as evidence below is available in a public repository. No u
   </picture>
 </p>
 
-<details>
-<summary><b><code>$ ls ~/private --summary</code></b> — selected repositories; closed source is not presented as evidence</summary>
-<br>
-
-`ai-office` · `ai-relay` · `my_coin` · `pupa-backend` · `quoka-bot` · `ru.repair` · `shitproxy` · `shitproxy-channels-backup` · `siteforcompany` · `workspacerurepair` · `x-plata`
-
-They cover Go backend and gateway work, AI tooling, bots, Rust, PHP, authentication, infrastructure automation, and earlier commercial web projects. Public repositories above are the verifiable portfolio.
-</details>
-
 ---
 
 ## `$ activity --snapshot`
